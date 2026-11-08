@@ -122,7 +122,7 @@ table{border-collapse:collapse;width:100%}
 </div>
 <div style="border-top: 1px solid #E2E8F0; padding-top: 16px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">RunDoodle GPS-Art agent</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Plans GPS-art running routes · Google ADK + Matt Pocock's framework</span></div>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">cynthia-slides skill</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">My own slide-making skill: HTML slides and editable PPTX in my design style</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">Custom agent skills</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">I build my own skills and put AI to work in my daily tasks, like slide-making</span></div>
 </div>
 </div>
 </div>
@@ -135,7 +135,7 @@ table{border-collapse:collapse;width:100%}
 <h2 id="about-h" class="sec-h">About</h2>
 <div class="sec-body" style="padding-top: 24px; gap: 20px">
 <p style="font-size: 17px; line-height: 1.75; color: #334155">I'm an AI data application engineer at <strong style="color: #0F172A; font-weight: 600">LITEON Technology</strong>, with hands-on experience bringing LLMs into internal enterprise systems: I lead a workplace-bullying complaint management system built with AI coding agents, integrating an LLM to draft notices.</p>
-<p style="font-size: 17px; line-height: 1.75; color: #334155">I keep learning AI and putting it to use in my work and daily life: <strong style="color: #0F172A; font-weight: 600">RunDoodle</strong>, a GPS-art running-route agent built with Google ADK following Matt Pocock's development framework; and <strong style="color: #0F172A; font-weight: 600">cynthia-slides</strong>, a slide-making skill I adapted from public HTML slide skills to my own design style.</p>
+<p style="font-size: 17px; line-height: 1.75; color: #334155">I keep learning AI and putting it to use in my work and daily life: <strong style="color: #0F172A; font-weight: 600">RunDoodle</strong>, a GPS-art running-route agent built with Google ADK following Matt Pocock's development framework. I also build my own agent skills for everyday work, such as one that makes slides in my design style.</p>
 <p style="font-size: 17px; line-height: 1.75; color: #334155">I hold an <strong style="color: #0F172A; font-weight: 600">M.S. in Industrial Engineering from National Tsing Hua University</strong> (GPA 4.16 / 4.3), where I finished first in class in Artificial Intelligence, Data Mining, Brain–Computer Interfaces and IoT.</p>
 </div>
 </div>
@@ -155,7 +155,7 @@ table{border-collapse:collapse;width:100%}
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li>Led the project and integrated a multimodal LLM that drafts outcome notices from case files, so HR reviews rather than writes from scratch.</li>
 <li>Built with AI agents via spec-driven development (SDD): align requirements, write specs, modularize by feature into verifiable vertical slices, then implement and test each iteratively.</li>
-<li>Turned complex statutory timelines into 5 closure paths; integrated 13 auto-filled legal documents; tracks 15 deadlines with real-time alerts and 14 notice types for complainants, respondents, case owners and outside counsel.</li>
+<li>Turned complex statutory timelines into 5 closure paths; integrated 13 auto-filled legal documents; tracks 15 deadlines with daily reminders and 14 notice types for complainants, respondents, case owners and outside counsel.</li>
 </ul>
 <p style="font-size: 15px; font-weight: 600; color: #0F172A; margin-top: 6px">Data Visualization with Power BI</p>
 <p style="font-size: 15px; line-height: 1.65; color: #334155">Organized data and visualized it in Power BI so procurement and production teams can see what is happening at a glance.</p>
@@ -181,6 +181,28 @@ table{border-collapse:collapse;width:100%}
 <div class="sec-in">
 <h2 id="proj-h" class="sec-h">Projects</h2>
 <div class="sec-body">
+<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
+<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2026 · Personal</p>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">RunDoodle: GPS-Art Running Route Planning Agent</h3>
+<p style="font-size: 14px; color: #64748B">Personal project · Built with Google ADK, following Matt Pocock's development framework</p>
+<p style="font-size: 15px; line-height: 1.7; color: #334155">An agent that plans GPS-art runs: routes on real streets that draw a target shape on the map when you run them.</p>
+<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
+<li>Fetched real road networks with OSMnx and ran A* search with deviation-penalty weights to trace the target shape, aiming for 70% shape similarity in demos.</li>
+<li>Built the agent in Python with Google ADK, deployed it on Agent Engine and displayed routes on Google Maps.</li>
+<li>Worked through GCP billing setup, API key types and platform updates that broke deployments.</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google ADK</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Agent Engine</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">OSMnx</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">A*</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google Maps</span>
+</div>
+</div>
+</article>
+
 <article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
 <p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2024 · Kaggle</p>
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
