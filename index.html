@@ -137,10 +137,9 @@ table{border-collapse:collapse;width:100%}
 <h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Workplace Bullying Complaint Management System</h3>
 <p style="font-size: 14px; color: #64748B">With the HR department</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Led the project with HR, clarifying statutory processes and system requirements across teams.</li>
-<li>Turned complex statutory timelines into 5 closure paths; integrated 13 auto-filled legal documents; tracks 15 deadlines with daily reminders and 14 notice types for complainants, respondents, case owners and outside counsel.</li>
+<li>Led the project with HR, clarifying statutory processes and turning them into 5 closure paths, 13 auto-filled legal documents, 15 tracked deadlines with daily reminders and 14 notice types.</li>
 <li>Integrated a multimodal LLM to read scanned case documents and draft outcome notices, validated against recorded decisions and output format; HR reviews instead of writing from scratch.</li>
-<li>Built with AI coding agents using Matt Pocock's skills: /grill-with-docs for requirements, /to-spec for specs, then modular vertical slices built with /tdd and checked with /code-review.</li>
+<li>Built with AI coding agents using Matt Pocock&#39;s skills: /grill-with-docs for requirements, /to-spec for specs, then vertical slices built with /tdd and checked with /code-review.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
@@ -159,9 +158,8 @@ table{border-collapse:collapse;width:100%}
 <p style="font-size: 15px; line-height: 1.7; color: #334155">A proof of concept testing whether agents can take on part of an engineering design flow: from a KiCad schematic and confirmed requirements to component placement, checks and file delivery. Scope covers placement only, not routing or manufacturing.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li>Grew a single-agent Skill + MCP prototype into four agents (requirements coordination, placement, manufacturability review and acceptance), with tool allowlists, write restrictions and delivery gates enforced in Python.</li>
-<li>Drove KiCad CLI through MCP and checked outputs with schematic–PCB consistency, geometry checks and file-hash comparison instead of relying on the model's own report.</li>
-<li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and result downloads.</li>
-<li>Validation so far: the single-agent version passed two small circuit cases; the multi-agent web version completed case one with an independent review. Failure cases and current limits are documented.</li>
+<li>Drove KiCad CLI through MCP and checked outputs with schematic–PCB consistency, geometry checks and file-hash comparison instead of relying on the model&#39;s own report.</li>
+<li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and downloads. Validated on small circuits so far (two cases single-agent, one multi-agent with independent review), with failure cases and limits documented.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
