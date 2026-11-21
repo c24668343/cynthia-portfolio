@@ -123,41 +123,68 @@ table{border-collapse:collapse;width:100%}
 <div class="sec-in">
 <h2 id="exp-h" class="sec-h">Experience</h2>
 <div class="sec-body">
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 0 0 8px">
 <p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2026 — Present</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">AI Data Application Engineer · <span style="color: #0F766E">LITEON Technology</span></h3>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<h3 style="font-size: 20px; font-weight: 600; line-height: 1.4">AI Data Application Engineer · <span style="color: #0F766E">LITEON Technology</span></h3>
 <p style="font-size: 14px; color: #64748B">AI &amp; Data Application Department</p>
-<p style="font-size: 15px; font-weight: 600; color: #0F172A; margin-top: 6px">Workplace Bullying Complaint Management System</p>
+</div>
+</div>
+
+<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
+<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">LITEON · HR</p>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Workplace Bullying Complaint Management System</h3>
+<p style="font-size: 14px; color: #64748B">With the HR department</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li>Led the project with HR, clarifying statutory processes and system requirements across teams.</li>
 <li>Turned complex statutory timelines into 5 closure paths; integrated 13 auto-filled legal documents; tracks 15 deadlines with daily reminders and 14 notice types for complainants, respondents, case owners and outside counsel.</li>
 <li>Integrated a multimodal LLM to read scanned case documents and draft outcome notices, validated against recorded decisions and output format; HR reviews instead of writing from scratch.</li>
 <li>Built with AI coding agents using Matt Pocock's skills: /grill-with-docs for requirements, /to-spec for specs, then modular vertical slices built with /tdd and checked with /code-review.</li>
 </ul>
-<p style="font-size: 15px; font-weight: 600; color: #0F172A; margin-top: 6px">PCB Placement Multi-Agent POC <span style="font-weight: 500; color: #64748B">· with the R&amp;D department</span></p>
-<p style="font-size: 14px; color: #64748B">Built with the Claude Agent SDK, developed with Claude Code</p>
-<p style="font-size: 15px; line-height: 1.65; color: #334155">A proof of concept testing whether agents can take on part of an engineering design flow: from a KiCad schematic and confirmed requirements to component placement, checks and file delivery. Scope covers placement only, not routing or manufacturing.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Flask</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">SQL Server</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LLM integration</span>
+</div>
+</div>
+</article>
+
+<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
+<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">LITEON · R&amp;D</p>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">PCB Placement Multi-Agent POC</h3>
+<p style="font-size: 14px; color: #64748B">With the R&amp;D department · Built with the Claude Agent SDK, developed with Claude Code</p>
+<p style="font-size: 15px; line-height: 1.7; color: #334155">A proof of concept testing whether agents can take on part of an engineering design flow: from a KiCad schematic and confirmed requirements to component placement, checks and file delivery. Scope covers placement only, not routing or manufacturing.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li>Grew a single-agent Skill + MCP prototype into four agents (requirements coordination, placement, manufacturability review and acceptance), with tool allowlists, write restrictions and delivery gates enforced in Python.</li>
 <li>Drove KiCad CLI through MCP and checked outputs with schematic–PCB consistency, geometry checks and file-hash comparison instead of relying on the model's own report.</li>
 <li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and result downloads.</li>
 <li>Validation so far: the single-agent version passed two small circuit cases; the multi-agent web version completed case one with an independent review. Failure cases and current limits are documented.</li>
 </ul>
-<p style="font-size: 15px; font-weight: 600; color: #0F172A; margin-top: 6px">Data Visualization with Power BI</p>
-<p style="font-size: 15px; line-height: 1.65; color: #334155">Organized data and visualized it in Power BI so procurement and production teams can see what is happening at a glance.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Claude Agent SDK</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">MCP</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">KiCad</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">FastAPI</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">SSE</span>
+</div>
+</div>
+</article>
+
+<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
+<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">LITEON · BI</p>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Data Visualization with Power BI</h3>
+<p style="font-size: 14px; color: #64748B">For procurement and production teams</p>
+<p style="font-size: 15px; line-height: 1.7; color: #334155">Organized data and visualized it in Power BI so procurement and production teams can see what is happening at a glance.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li><strong style="font-weight: 600; color: #0F172A">Supply-chain risk</strong>: visualized part-number hierarchies, so when a raw material is affected, buyers can immediately pinpoint every impacted part.</li>
 <li><strong style="font-weight: 600; color: #0F172A">Production scheduling</strong>: factory-layout and process-flow views show each work order's location, WIP and progress.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Flask</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">SQL Server</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LLM integration</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Claude Agent SDK</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">MCP</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">FastAPI</span>
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Power BI</span>
 </div>
 </div>
