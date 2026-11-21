@@ -204,10 +204,8 @@ table{border-collapse:collapse;width:100%}
 <p style="font-size: 15px; line-height: 1.7; color: #334155">A multi-agent system that turns a natural-language request (place, distance and shape) into a runnable GPS-art route on real streets, with a map preview and GPX export.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li>Orchestrated intent parsing, shape design, road-network analysis, placement search and evaluation agents in Google ADK, using session state, events and nested loops to carry state across stages and self-correct.</li>
-<li>Gated quality with a multimodal visual judge, deterministic geometry checks and discrete Fréchet similarity, with bounded retries; if a design falls short, routing stops and a structured failure report is returned.</li>
-<li>Integrated OSM, Google Routes, OSRM and Google Maps with waypoint limits, chunked requests and fallbacks; a KDTree pre-screens rotation, scale and offset candidates so only the top 3 are routed in the first round.</li>
-<li>Fixed nested-loop exit signals, evaluation hand-off and closed-route scoring; maintain 213 Python and 16 frontend offline tests.</li>
-<li>Prototyped an image-to-single-stroke pipeline (skeletonization, graph paths, scale simplification) and ran a blind test of 10 themes × 3 runs comparing AI and human judgments, recording trade-offs as ADRs.</li>
+<li>Gated quality with a multimodal visual judge, deterministic geometry checks and discrete Fréchet similarity; bounded retries stop routing and return a structured failure report when a design falls short. Maintain 213 Python and 16 frontend offline tests.</li>
+<li>Integrated OSM, Google Routes, OSRM and Google Maps with chunked requests and fallbacks, using a KDTree to pre-screen candidates before costly routing; ran a blind test of 10 themes × 3 runs comparing AI and human judgments.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
