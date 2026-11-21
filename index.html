@@ -110,10 +110,11 @@ table{border-collapse:collapse;width:100%}
 </div>
 <div style="flex: 1 1 280px; min-width: 280px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 26px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; color: #0F766E">2</span>
-<span style="font-size: 14px; font-weight: 600; color: #0F172A">AI tools I built and use</span>
+<span style="font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; color: #0F766E">3</span>
+<span style="font-size: 14px; font-weight: 600; color: #0F172A">AI agents and tools I built</span>
 </div>
 <div style="border-top: 1px solid #E2E8F0; padding-top: 16px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">PCB placement multi-agent POC</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Claude Agent SDK + MCP driving KiCad</span></div>
 <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">RunDoodle GPS-Art agent</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Multi-agent GPS-art route planner · Google ADK + Matt Pocock's framework</span></div>
 <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">Custom agent skills</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">I build my own skills and put AI to work in my daily tasks, like slide-making</span></div>
 </div>
@@ -166,21 +167,47 @@ table{border-collapse:collapse;width:100%}
 <article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
 <p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2026 · Personal</p>
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">PCB Placement Multi-Agent POC</h3>
+<p style="font-size: 14px; color: #64748B">Personal project · Built with the Claude Agent SDK, developed with Claude Code</p>
+<p style="font-size: 15px; line-height: 1.7; color: #334155">A proof of concept testing whether agents can take on part of an engineering design flow: from a KiCad schematic and confirmed requirements to component placement, checks and file delivery. Scope covers placement only, not routing or manufacturing.</p>
+<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
+<li>Grew a single-agent Skill + MCP prototype into four agents (requirements coordination, placement, manufacturability review and acceptance), with tool allowlists, write restrictions and delivery gates enforced in Python.</li>
+<li>Drove KiCad CLI through MCP and checked outputs with schematic–PCB consistency, geometry checks and file-hash comparison instead of relying on the model's own report.</li>
+<li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and result downloads.</li>
+<li>Validation so far: the single-agent version passed two small circuit cases; the multi-agent web version completed case one with an independent review. Failure cases and current limits are documented.</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Claude Agent SDK</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">MCP</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">KiCad</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">FastAPI</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">SSE</span>
+</div>
+</div>
+</article>
+
+<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
+<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2026 · Personal</p>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">RunDoodle: GPS-Art Running Route Planning Agent</h3>
 <p style="font-size: 14px; color: #64748B">Personal project · Built with Google ADK, following Matt Pocock's development framework</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">A multi-agent system that plans GPS-art runs: routes on real streets that draw a target shape on the map when you run them.</p>
+<p style="font-size: 15px; line-height: 1.7; color: #334155">A multi-agent system that turns a natural-language request (place, distance and shape) into a runnable GPS-art route on real streets, with a map preview and GPX export.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Fetched real road networks with OSMnx and ran A* search with deviation-penalty weights to trace the target shape, aiming for 70% shape similarity in demos.</li>
-<li>Built the multi-agent system in Python with Google ADK, deployed it on Agent Engine and displayed routes on Google Maps.</li>
-<li>Worked through GCP billing setup, API key types and platform updates that broke deployments.</li>
+<li>Orchestrated intent parsing, shape design, road-network analysis, placement search and evaluation agents in Google ADK, using session state, events and nested loops to carry state across stages and self-correct.</li>
+<li>Gated quality with a multimodal visual judge, deterministic geometry checks and discrete Fréchet similarity, with bounded retries; if a design falls short, routing stops and a structured failure report is returned.</li>
+<li>Integrated OSM, Google Routes, OSRM and Google Maps with waypoint limits, chunked requests and fallbacks; a KDTree pre-screens rotation, scale and offset candidates so only the top 3 are routed in the first round.</li>
+<li>Fixed nested-loop exit signals, evaluation hand-off and closed-route scoring; maintain 213 Python and 16 frontend offline tests.</li>
+<li>Prototyped an image-to-single-stroke pipeline (skeletonization, graph paths, scale simplification) and ran a blind test of 10 themes × 3 runs comparing AI and human judgments, recording trade-offs as ADRs.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google ADK</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Agent Engine</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">OSMnx</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">A*</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google Maps</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LiteLLM</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Flask</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">OSRM</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google Routes</span>
+<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">pytest</span>
 </div>
 </div>
 </article>
