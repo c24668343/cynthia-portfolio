@@ -64,7 +64,7 @@ table{border-collapse:collapse;width:100%}
 <div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
 <span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 6px 14px">AI Application Engineer</span>
 <h1 style="font-size: clamp(44px, 5.6vw, 72px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">Cynthia Pan</h1>
-<p style="font-size: 17px; line-height: 1.75; color: #334155; max-width: 580px">AI Data Application Engineer at <strong style="color: #0F172A; font-weight: 600">LITEON Technology</strong>, focused on applying AI to improve how internal teams work. Holds an M.S. in Industrial Engineering from <strong style="color: #0F172A; font-weight: 600">National Tsing Hua University</strong> (GPA 4.16 / 4.3) with a strong foundation in machine learning and optimization, and keeps learning AI by building agents with Google ADK and custom agent skills.</p>
+<p style="font-size: 17px; line-height: 1.75; color: #334155; max-width: 580px">AI Data Application Engineer at <strong style="color: #0F172A; font-weight: 600">LITEON Technology</strong>, focused on applying AI to improve how internal teams work. Holds an M.S. in Industrial Engineering from <strong style="color: #0F172A; font-weight: 600">National Tsing Hua University</strong> (GPA 4.16 / 4.3) with a strong foundation in machine learning and optimization, and keeps learning AI by building multi-agent systems with Google ADK and the Claude Agent SDK, plus custom agent skills.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px">
 <a href="mailto:c24668343@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; color: #334155">
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>c24668343@gmail.com</a>
@@ -114,7 +114,7 @@ table{border-collapse:collapse;width:100%}
 <span style="font-size: 14px; font-weight: 600; color: #0F172A">AI tools I built and use</span>
 </div>
 <div style="border-top: 1px solid #E2E8F0; padding-top: 16px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">RunDoodle GPS-Art agent</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Plans GPS-art running routes · Google ADK + Matt Pocock's framework</span></div>
+<div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">RunDoodle GPS-Art agent</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Multi-agent GPS-art route planner · Google ADK + Matt Pocock's framework</span></div>
 <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 14px; font-weight: 600; color: #0F172A">Custom agent skills</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">I build my own skills and put AI to work in my daily tasks, like slide-making</span></div>
 </div>
 </div>
@@ -134,9 +134,10 @@ table{border-collapse:collapse;width:100%}
 <p style="font-size: 14px; color: #64748B">AI &amp; Data Application Department</p>
 <p style="font-size: 15px; font-weight: 600; color: #0F172A; margin-top: 6px">Workplace Bullying Complaint Management System</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Led the project and integrated a multimodal LLM that drafts outcome notices from case files, so HR reviews rather than writes from scratch.</li>
-<li>Built with AI agents via spec-driven development (SDD): align requirements, write specs, modularize by feature into verifiable vertical slices, then implement and test each iteratively.</li>
+<li>Led the project with HR, clarifying statutory processes and system requirements across teams.</li>
 <li>Turned complex statutory timelines into 5 closure paths; integrated 13 auto-filled legal documents; tracks 15 deadlines with daily reminders and 14 notice types for complainants, respondents, case owners and outside counsel.</li>
+<li>Integrated a multimodal LLM to read scanned case documents and draft outcome notices, validated against recorded decisions and output format; HR reviews instead of writing from scratch.</li>
+<li>Built with AI coding agents using Matt Pocock's skills: /grill-with-docs for requirements, /to-spec for specs, then modular vertical slices built with /tdd and checked with /code-review.</li>
 </ul>
 <p style="font-size: 15px; font-weight: 600; color: #0F172A; margin-top: 6px">Data Visualization with Power BI</p>
 <p style="font-size: 15px; line-height: 1.65; color: #334155">Organized data and visualized it in Power BI so procurement and production teams can see what is happening at a glance.</p>
@@ -167,10 +168,10 @@ table{border-collapse:collapse;width:100%}
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">RunDoodle: GPS-Art Running Route Planning Agent</h3>
 <p style="font-size: 14px; color: #64748B">Personal project · Built with Google ADK, following Matt Pocock's development framework</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">An agent that plans GPS-art runs: routes on real streets that draw a target shape on the map when you run them.</p>
+<p style="font-size: 15px; line-height: 1.7; color: #334155">A multi-agent system that plans GPS-art runs: routes on real streets that draw a target shape on the map when you run them.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
 <li>Fetched real road networks with OSMnx and ran A* search with deviation-penalty weights to trace the target shape, aiming for 70% shape similarity in demos.</li>
-<li>Built the agent in Python with Google ADK, deployed it on Agent Engine and displayed routes on Google Maps.</li>
+<li>Built the multi-agent system in Python with Google ADK, deployed it on Agent Engine and displayed routes on Google Maps.</li>
 <li>Worked through GCP billing setup, API key types and platform updates that broke deployments.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
