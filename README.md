@@ -18,5 +18,5 @@ files/              résumé and project reports (student IDs removed)
 
 ## Before you publish
 
-- Put your résumé PDF at `files/resume.pdf` (exported from Canva).
+- Résumé PDFs (exported from Canva): English at `files/resume.pdf`, Traditional Chinese at `files/resume-zh.pdf`.
 - To add GitHub / LinkedIn links, edit the contact row in the hero section of `index.html`.
