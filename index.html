@@ -157,9 +157,9 @@ table{border-collapse:collapse;width:100%}
 <p style="font-size: 14px; color: #64748B">With the R&amp;D department · Built with the Claude Agent SDK, developed with Claude Code</p>
 <p style="font-size: 15px; line-height: 1.7; color: #334155">A proof of concept testing whether agents can take on part of an engineering design flow: from a KiCad schematic and confirmed requirements to component placement, checks and file delivery. Scope covers placement only, not routing or manufacturing.</p>
 <ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Grew a single-agent Skill + MCP prototype into four agents (requirements coordination, placement, manufacturability review and acceptance), with tool allowlists, write restrictions and delivery gates enforced in Python.</li>
+<li>Built four agents (requirements coordination, placement, manufacturability review and acceptance), with tool allowlists, write restrictions and delivery gates enforced in Python.</li>
 <li>Drove KiCad CLI through MCP and checked outputs with schematic–PCB consistency, geometry checks and file-hash comparison instead of relying on the model&#39;s own report.</li>
-<li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and downloads. Validated on small circuits so far (two cases single-agent, one multi-agent with independent review), with failure cases and limits documented.</li>
+<li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and downloads. Also built a single-agent plugin and compared it with the multi-agent system on small circuit cases to judge where each approach fits.</li>
 </ul>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
 <span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
