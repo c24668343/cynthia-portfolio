@@ -5,6 +5,7 @@ Static site for GitHub Pages. No build step.
 ```
 index.html          the whole site (HTML + CSS + a small scroll-spy script)
 assets/portrait.jpg hero photo
+files/              résumé and project reports (student IDs removed)
 .nojekyll           tells GitHub Pages to serve files as-is
 ```
 
@@ -17,4 +18,5 @@ assets/portrait.jpg hero photo
 
 ## Before you publish
 
+- Résumé PDF (exported from Canva) at `files/resume.pdf`: page 1 Traditional Chinese, page 2 English.
 - To add GitHub / LinkedIn links, edit the contact row in the hero section of `index.html`.
