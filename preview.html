@@ -37,8 +37,6 @@ table{border-collapse:collapse;width:100%}
 .sec-body{flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:16px}
 @media (max-width:860px){.sec-h{position:static;padding-top:0}.sec-in{padding:56px 24px}.hide-sm{display:none}}
 .work-card{transition:box-shadow .15s ease,border-color .15s ease}.work-card:hover{text-decoration:none!important;border-color:#99F6E4!important;box-shadow:0 6px 24px rgba(15,23,42,.08)}
-[hidden]{display:none!important}
-.tx:hover{background:#F0FDFA!important}
 @media (max-width:860px){.g3,.g2{grid-template-columns:minmax(0,1fr)!important}}
 </style>
 </head>
@@ -211,14 +209,8 @@ table{border-collapse:collapse;width:100%}
 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>IoT Technologies &amp; Applications</span><span style="font-size: 12px; font-weight: 600; color: #115E59">A+ · 1 / 18</span></div>
 
 </div>
-<div id="nthu-rest" hidden style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #E2E8F0; padding-top: 12px">
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Human Information Processing</span><span>A · 2 / 31</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Statistical Methods</span><span>A · 17 / 78</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Software Project Management</span><span>A · 17 / 41</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Production Planning &amp; Control</span><span>A− · 15 / 122</span></div>
 
-</div>
-<button type="button" class="tx" data-target="nthu-rest" aria-expanded="false" style="align-self: flex-start; margin-top: auto; min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #0F766E; background: #FFFFFF; color: #0F766E; font-size: 14px; font-weight: 600">Show full transcript ▾</button>
+
 </div>
 <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
 <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">2019 — 2023</span>
@@ -230,16 +222,8 @@ table{border-collapse:collapse;width:100%}
 <div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>IoT Technologies &amp; Applications</span><span style="font-size: 12px; font-weight: 600; color: #115E59">96</span></div>
 
 </div>
-<div id="ccu-rest" hidden style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #E2E8F0; padding-top: 12px">
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Data Structures</span><span>93</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Calculus</span><span>93</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Linear Algebra</span><span>92</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>System Simulation</span><span>92</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Database Management</span><span>88</span></div>
-<div style="display: flex; justify-content: space-between; font-size: 14px; color: #475569; padding: 4px 12px"><span>Big Data &amp; Data Analysis</span><span>87</span></div>
 
-</div>
-<button type="button" class="tx" data-target="ccu-rest" aria-expanded="false" style="align-self: flex-start; margin-top: auto; min-height: 44px; padding: 0 16px; border-radius: 8px; border: 1px solid #0F766E; background: #FFFFFF; color: #0F766E; font-size: 14px; font-weight: 600">Show full transcript ▾</button>
+
 </div>
 </div>
 </section>
@@ -297,12 +281,6 @@ table{border-collapse:collapse;width:100%}
   spy();
 })();
 </script>
-<script>
-document.querySelectorAll('.tx').forEach(function(b){b.addEventListener('click',function(){
-var el=document.getElementById(b.dataset.target);var open=el.hasAttribute('hidden');
-if(open){el.removeAttribute('hidden');}else{el.setAttribute('hidden','');}
-b.setAttribute('aria-expanded',open?'true':'false');
-b.textContent=open?'Hide full transcript ▴':'Show full transcript ▾';});});
-</script>
+
 </body>
 </html>
