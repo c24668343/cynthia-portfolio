@@ -68,8 +68,9 @@ h2{font-size:30px;line-height:1.2;font-weight:700;letter-spacing:-.02em}
 
 /* results */
 .board{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.board .img{background:#F1F5F9;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
-.board img{max-width:min(100%,440px);max-height:100%;width:auto;height:auto;border-radius:4px;box-shadow:0 8px 20px -12px rgba(15,23,42,.5)}
+.board .img{background:#F1F5F9;aspect-ratio:16/10;container-type:inline-size;display:flex;align-items:center;justify-content:center;overflow:hidden}
+/* one shared scale: the widest board (05, 38.1 mm) spans 72% of the frame; others scale by their real width in mm */
+.board img{display:block;width:calc(var(--mm) / 38.1 * 72cqw);height:auto;max-width:none;border-radius:3px;box-shadow:0 8px 20px -12px rgba(15,23,42,.5)}
 .board .body{padding:18px 22px;display:flex;flex-direction:column;gap:12px}
 .board .t{font-size:16px;font-weight:600}
 .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin:0}
@@ -217,9 +218,9 @@ ul.plain li+li{margin-top:4px}
 <div class="card"><span class="t">Geometry checks</span><span class="d">KiCad design rules pass, plus size, spacing, keep-out and test-point requirements.</span></div>
 <div class="card"><span class="t">File-hash comparison</span><span class="d">Delivered files are the ones that were checked.</span></div>
 </div>
-<div class="g2">
+<div class="g2" style="align-items:start">
 <div class="board">
-<div class="img"><img src="assets/pcb/board-05.png" alt="Delivered layout for case 05: a 5 V linear regulator board with input terminal, diode, regulator, two electrolytic capacitors and four test points" width="740" height="490" loading="lazy"></div>
+<div class="img"><img src="assets/pcb/board-05.png" style="--mm:38.1" alt="Delivered layout for case 05: a 5 V linear regulator board with input terminal, diode, regulator, two electrolytic capacitors and four test points" width="740" height="490" loading="lazy"></div>
 <div class="body">
 <span class="t">Case 05 · 5 V regulator</span>
 <dl class="facts">
@@ -231,7 +232,7 @@ ul.plain li+li{margin-top:4px}
 </div>
 </div>
 <div class="board">
-<div class="img"><img src="assets/pcb/board-01.png" alt="Delivered layout for case 01: a small board with a two-pin header, resistor, LED and a tactile push button" width="740" height="340" loading="lazy"></div>
+<div class="img"><img src="assets/pcb/board-01.png" style="--mm:18.45" alt="Delivered layout for case 01: a small board with a two-pin header, resistor, LED and a tactile push button" width="740" height="340" loading="lazy"></div>
 <div class="body">
 <span class="t">Case 01 · LED + button</span>
 <dl class="facts">
