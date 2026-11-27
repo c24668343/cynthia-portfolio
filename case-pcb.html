@@ -162,7 +162,7 @@ ul.plain li+li{margin-top:4px}
 <p class="lede">A lead agent talks with the engineer and hands out work. The rules that matter are not in any prompt: Python hooks check every tool call, so an agent cannot step outside its role even if it tries.</p>
 </div>
 
-<div class="arch" role="img" aria-label="Architecture: the engineer uses a local web app; a runner built on the Claude Agent SDK hosts a lead session with lead, placement and DFM agents, plus an isolated acceptance agent; Python hooks check every tool call before it reaches KiCad, the PCB MCP server or the job workspace.">
+<div class="arch" role="img" aria-label="Architecture: the engineer uses a local web app; a runner built on the Claude Agent SDK hosts a lead session with lead, placement and DFM agents, plus an independent acceptance agent; Python hooks check every tool call before it reaches KiCad, the PCB MCP server or the job workspace.">
 <div class="arch-row">
 <div class="node soft" style="flex:0 1 200px"><b>Engineer</b><span>Uploads schematic, answers questions, approves</span></div>
 <div class="node"><b>Local web app</b><span>FastAPI · live progress over SSE</span></div>
@@ -181,7 +181,7 @@ ul.plain li+li{margin-top:4px}
 </div>
 <div class="zone iso">
 <span class="badge">3</span>
-<p class="zl">Isolated acceptance</p>
+<p class="zl">Independent acceptance</p>
 <div class="node agent"><b>Acceptance · Sonnet</b><span>Read-only. Gets input assembled by code, never placement's own account</span></div>
 </div>
 </div>
@@ -202,7 +202,7 @@ ul.plain li+li{margin-top:4px}
 <div class="g3">
 <div class="num-card"><span class="n">1</span><span class="t">One writer</span><span class="d">Each agent has its own tool allowlist. Only placement can modify the board; DFM and acceptance can look but not touch.</span></div>
 <div class="num-card"><span class="n">2</span><span class="t">Gates in code, not prompts</span><span class="d">Delivery needs a passed acceptance and the engineer's approval. If the board changes after approval, the approval is void. Three failures in a row stop the job.</span></div>
-<div class="num-card"><span class="n">3</span><span class="t">Acceptance can't be talked into passing</span><span class="d">Its input is built by code from the engineer's own material. It never sees what placement claims it did, and the lead can't write it.</span></div>
+<div class="num-card"><span class="n">3</span><span class="t">Independent acceptance</span><span class="d">Its input is assembled by code from the engineer's original files. It never sees placement's report, and the lead can't edit what it receives.</span></div>
 </div>
 </section>
 
