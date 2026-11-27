@@ -10,8 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#F8FAFC;color:#0F172A;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-p,li,dd{text-wrap:pretty}
-h1,h2,h3{text-wrap:balance}
 a{color:#0F766E;text-decoration:none}a:hover{color:#115E59;text-decoration:underline;text-underline-offset:3px}
 h1,h2,h3,p{margin:0}
 button{font-family:inherit;cursor:pointer}
@@ -21,7 +19,7 @@ button:focus-visible,video:focus-visible{outline:2px solid #0F766E;outline-offse
 .sec-head{display:flex;flex-direction:column;gap:8px}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0F766E}
 h2{font-size:30px;line-height:1.2;font-weight:700;letter-spacing:-.02em}
-.lede{font-size:15px;color:#475569;max-width:700px;line-height:1.65}
+.lede{font-size:15px;color:#475569;line-height:1.65}
 .card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px}
 .card .t{font-size:16px;font-weight:600}.card .d{font-size:14px;color:#64748B;line-height:1.65}
 .g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
@@ -132,8 +130,7 @@ ul.plain li+li{margin-top:4px}
 <span class="tag">LITEON · with the R&amp;D department · 2026</span>
 </div>
 <h1 style="font-size:48px;line-height:1.08;font-weight:700;letter-spacing:-0.03em">PCB Placement Multi-Agent POC</h1>
-<p style="font-size:19px;line-height:1.6;color:#334155;max-width:760px">Can agents take on part of an engineering design flow?<br>This POC tests it on one step: placing components on a KiCad board, from schematic and confirmed requirements to checked, delivered files.</p>
-<p style="font-size:14px;color:#64748B">Scope: placement only. Not routing, not manufacturing.</p>
+<p style="font-size:19px;line-height:1.6;color:#334155">Can agents take on part of an engineering design flow? This POC tests it on one step: placing components on a KiCad board, from schematic and confirmed requirements to checked, delivered files.</p>
 </div>
 
 <!-- Demo -->
@@ -149,12 +146,11 @@ ul.plain li+li{margin-top:4px}
 </div>
 </div>
 <div class="player">
-<video id="demo-video" controls muted playsinline preload="metadata" poster="assets/pcb/case-05-poster.jpg" aria-describedby="demo-cap">
+<video id="demo-video" controls muted playsinline preload="metadata" poster="assets/pcb/case-05-poster.jpg">
 <source src="assets/pcb/case-05.mp4" type="video/mp4">
 </video>
 </div>
 <div class="steps" id="steps" role="group" aria-label="Jump to a stage"></div>
-<p class="caption" id="demo-cap">Replay of a recorded run, compressed to about a minute; the interface is in Traditional Chinese. The four cards at the top light up as each agent works, and the preview on the left refreshes with every new layout. The engineer answers the agent's questions and approves the layout before anything is delivered.</p>
 </section>
 
 <!-- Architecture -->
@@ -276,7 +272,6 @@ ul.plain li+li{margin-top:4px}
 <p class="cost">Most of the extra cost came from handoffs between the lead and placement agents.<br>Est. US$3.06–4.87 per case at list price.</p>
 </div>
 </div>
-<p class="takeaway"><strong>The clearest gain was a guaranteed process, not higher accuracy.</strong> These two cases don't show that an extra acceptance agent catches more errors: it also missed a contradiction in one case's requirements.</p>
 <div class="g2" style="gap:24px 48px">
 <div style="display:flex;flex-direction:column;gap:10px">
 <p class="eyebrow" style="color:#475569">Limits</p>
