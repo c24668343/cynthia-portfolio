@@ -10,6 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 body{margin:0;background:#F8FAFC;color:#0F172A;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+p,li,dd{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
 a{color:#0F766E;text-decoration:none}a:hover{color:#115E59;text-decoration:underline;text-underline-offset:3px}
 h1,h2,h3,p{margin:0}
 button{font-family:inherit;cursor:pointer}
@@ -130,7 +132,7 @@ ul.plain li+li{margin-top:4px}
 <span class="tag">LITEON · with the R&amp;D department · 2026</span>
 </div>
 <h1 style="font-size:48px;line-height:1.08;font-weight:700;letter-spacing:-0.03em">PCB Placement Multi-Agent POC</h1>
-<p style="font-size:19px;line-height:1.6;color:#334155;max-width:760px">Can agents take on part of an engineering design flow? This POC tests it on one step: placing components on a KiCad board, from schematic and confirmed requirements to checked, delivered files.</p>
+<p style="font-size:19px;line-height:1.6;color:#334155;max-width:760px">Can agents take on part of an engineering design flow?<br>This POC tests it on one step: placing components on a KiCad board, from schematic and confirmed requirements to checked, delivered files.</p>
 <p style="font-size:14px;color:#64748B">Scope: placement only. Not routing, not manufacturing.</p>
 </div>
 
@@ -251,7 +253,7 @@ ul.plain li+li{margin-top:4px}
 <section class="sec" aria-labelledby="cmp-h">
 <div class="sec-head">
 <p class="eyebrow">Comparison</p>
-<h2 id="cmp-h">Single agent or multi-agent?</h2>
+<h2 id="cmp-h">Single agent or multi&#8209;agent?</h2>
 <p class="lede">Alongside this system I built a single-agent Claude Code plugin, run from the Claude CLI. Both got the same schematics, requirements and main model, and both outputs went through the same checks.</p>
 </div>
 <div class="stats">
