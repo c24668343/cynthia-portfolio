@@ -78,9 +78,8 @@ table{border-collapse:collapse;width:100%}
 </div>
 
 <a class="work-card" href="case-pcb.html" style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; color: #0F172A">
-<div style="flex: 1.3 1 440px; min-height: 320px; background: #F0FDFA; display: flex; align-items: center; justify-content: center; position: relative; padding: 28px; box-sizing: border-box">
-<div style="position: absolute; inset: 18px; border: 2px dashed #99F6E4; border-radius: 12px"></div>
-<p style="position: relative; font-size: 14px; font-weight: 600; color: #115E59; text-align: center; max-width: 360px; line-height: 1.6">[ 10-second loop: components snapping into place on a sample board ]</p>
+<div style="flex: 1.3 1 440px; min-height: 320px; background: #F0FDFA; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box">
+<video class="pcb-loop" src="assets/pcb/loop-home.mp4" poster="assets/pcb/loop-home-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Sped-up run of the PCB agents: each agent card lights up in turn while the board preview updates" style="display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 16px 32px -20px rgba(15,23,42,0.45)"></video>
 </div>
 <div style="flex: 1 1 340px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; justify-content: center">
 <div style="display: flex; gap: 8px; flex-wrap: wrap">
@@ -281,5 +280,6 @@ table{border-collapse:collapse;width:100%}
 })();
 </script>
 
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){document.querySelectorAll("video.pcb-loop").forEach(function(v){v.removeAttribute("autoplay");v.pause();});}});</script>
 </body>
 </html>

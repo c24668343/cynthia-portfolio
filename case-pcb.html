@@ -13,108 +13,342 @@ body{margin:0;background:#F8FAFC;color:#0F172A;font-family:'Inter',system-ui,san
 a{color:#0F766E;text-decoration:none}a:hover{color:#115E59;text-decoration:underline;text-underline-offset:3px}
 h1,h2,h3,p{margin:0}
 button{font-family:inherit;cursor:pointer}
+button:focus-visible,video:focus-visible{outline:2px solid #0F766E;outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:48px 32px 96px;box-sizing:border-box;display:flex;flex-direction:column;gap:80px}
+.sec{display:flex;flex-direction:column;gap:28px}
+.sec-head{display:flex;flex-direction:column;gap:8px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0F766E}
+h2{font-size:30px;line-height:1.2;font-weight:700;letter-spacing:-.02em}
+.lede{font-size:15px;color:#475569;max-width:700px;line-height:1.65}
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.card .t{font-size:16px;font-weight:600}.card .d{font-size:14px;color:#64748B;line-height:1.65}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tag{font-size:12px;font-weight:500;color:#475569;background:#F1F5F9;border-radius:999px;padding:4px 12px}
+.tag.on{font-weight:600;color:#FFFFFF;background:#0F766E}
+
+/* demo player */
+.picks{display:flex;gap:8px;flex-wrap:wrap}
 .pick{font-size:14px;font-weight:500;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #CBD5E1;background:#FFFFFF;color:#334155}
 .pick.is-on{font-weight:600;border-color:#0F766E;background:#0F766E;color:#FFFFFF}
-.step{min-height:64px;text-align:left;padding:12px 14px;border-radius:10px;border:1px solid #E2E8F0;background:#FFFFFF;color:#334155;display:flex;flex-direction:column;gap:2px}
-.step .k{font-size:11px;font-weight:700;color:#64748B}.step .t{font-size:14px;font-weight:600}
+.player{background:#0F172A;border-radius:18px;padding:10px;box-shadow:0 20px 40px -24px rgba(15,23,42,.45)}
+.player video{display:block;width:100%;height:auto;aspect-ratio:1920/1012;border-radius:10px;background:#0F172A}
+.steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.step{min-height:64px;text-align:left;padding:10px 12px;border-radius:10px;border:1px solid #E2E8F0;background:#FFFFFF;color:#334155;display:flex;flex-direction:column;gap:3px}
+.step .k{font-size:11px;font-weight:700;color:#64748B;font-variant-numeric:tabular-nums}.step .t{font-size:13px;font-weight:600;line-height:1.3}
+.step:hover{border-color:#0F766E}
 .step.is-on{border-color:#0F766E;background:#0F766E;color:#FFFFFF}.step.is-on .k{color:#CCFBF1}
-@media (max-width:760px){.g5,.g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+.caption{font-size:13px;color:#64748B;line-height:1.6}
+
+/* architecture */
+.arch{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:0}
+.arch-row{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap}
+.node{flex:1 1 160px;border:1px solid #E2E8F0;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:3px;background:#FFFFFF;position:relative}
+.node b{font-size:14px;font-weight:600}.node span{font-size:12px;color:#64748B;line-height:1.5}
+.node.soft{background:#F1F5F9;border-color:transparent}
+.node.agent{border-color:#99F6E4;background:#F0FDFA}
+.node.writer{border:2px solid #0F766E;background:#F0FDFA}
+.zone{flex:1 1 300px;border:1.5px dashed #CBD5E1;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;position:relative}
+.zone>.zl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#64748B}
+.zone.iso{flex:0 1 240px;border-color:#0F766E}
+.zone .arch-row{gap:10px}
+.zone>.node{flex:0 0 auto}
+.zone.iso>.node{flex:1 1 auto}
+.gate{background:#0F172A;color:#FFFFFF;border-radius:12px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:relative}
+.gate b{font-size:14px;font-weight:600}.gate span{font-size:12px;color:#CBD5E1}
+.link{display:flex;align-items:center;gap:10px;padding:6px 0 6px 22px;font-size:12px;color:#64748B;min-height:28px}
+.link::before{content:"";width:2px;align-self:stretch;background:#CBD5E1;border-radius:2px}
+.badge{position:absolute;top:-10px;right:-10px;width:24px;height:24px;border-radius:50%;background:#0F766E;color:#FFFFFF;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #FFFFFF}
+.gate .badge{box-shadow:0 0 0 3px #FFFFFF}
+.node .badge,.gate .badge{color:#FFFFFF;font-size:12px;line-height:1}
+.num-card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.num-card .n{width:26px;height:26px;border-radius:50%;background:#0F766E;color:#FFFFFF;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.num-card .t{font-size:16px;font-weight:600}.num-card .d{font-size:14px;color:#475569;line-height:1.65}
+
+/* results */
+.board{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.board .img{background:#F1F5F9;aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box}
+.board img{max-width:min(100%,440px);max-height:100%;width:auto;height:auto;border-radius:4px;box-shadow:0 8px 20px -12px rgba(15,23,42,.5)}
+.board .body{padding:18px 22px;display:flex;flex-direction:column;gap:12px}
+.board .t{font-size:16px;font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px;margin:0}
+.facts div{display:flex;flex-direction:column;gap:1px}
+.facts dt{font-size:12px;color:#64748B}.facts dd{margin:0;font-size:14px;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* comparison */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #E2E8F0;border-bottom:1px solid #E2E8F0}
+.stat{padding:22px 20px;display:flex;flex-direction:column;gap:6px;border-left:1px solid #E2E8F0}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .l{font-size:13px;color:#475569;font-weight:500}
+.stat .v{font-size:36px;line-height:1.1;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .c{font-size:13px;color:#64748B;line-height:1.5}
+.fit{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.fit.multi{border-color:#0F766E}
+.fit .h{font-size:17px;font-weight:600}
+.fit .k{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#64748B}
+.fit p{font-size:15px;color:#334155;line-height:1.65}
+.fit .cost{font-size:13px;color:#64748B;line-height:1.6;border-top:1px solid #E2E8F0;padding-top:12px}
+.takeaway{background:#F0FDFA;border-left:3px solid #0F766E;border-radius:0 12px 12px 0;padding:18px 22px;font-size:15px;line-height:1.7;color:#134E4A}
+.takeaway strong{color:#0F172A}
+ul.plain{margin:0;padding-left:18px;font-size:14px;color:#475569;line-height:1.7}
+ul.plain li+li{margin-top:4px}
+
+@media (max-width:860px){
+  .steps{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
+  .step{flex:0 0 132px;scroll-snap-align:start}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid #E2E8F0}
+  .zone.iso{flex:1 1 300px}
+}
+@media (max-width:760px){
+  .wrap{padding:36px 20px 72px;gap:64px}
+  h1{font-size:36px!important}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .arch{padding:20px 16px}
+  .arch-row>.node{flex:1 1 100%!important}
+  .stat .v{font-size:30px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header style="position: sticky; top: 0; z-index: 50; background: rgba(248,250,252,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E2E8F0">
-<div style="max-width: 1040px; margin: 0 auto; padding: 0 32px; height: 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between">
-<a href="index.html" style="font-size: 16px; font-weight: 700; color: #0F172A">Cynthia Pan</a>
-<a href="index.html#work" style="font-size: 14px; font-weight: 600">All work</a>
+<header style="position:sticky;top:0;z-index:50;background:rgba(248,250,252,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #E2E8F0">
+<div style="max-width:1040px;margin:0 auto;padding:0 32px;height:64px;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between">
+<a href="index.html" style="font-size:16px;font-weight:700;color:#0F172A">Cynthia Pan</a>
+<a href="index.html#work" style="font-size:14px;font-weight:600">All work</a>
 </div>
 </header>
-<div style="font-family: 'Inter', system-ui, sans-serif; color: #0F172A; background: #F8FAFC; width: 100%">
-<div style="max-width: 1040px; margin: 0 auto; padding: 48px 32px 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 72px">
 
-<div style="display: flex; flex-direction: column; gap: 20px">
-<a href="index.html#work" style="font-size: 14px; font-weight: 600">← All work</a>
-<div style="display: flex; gap: 8px; flex-wrap: wrap">
-<span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 4px 12px">Claude Agent SDK</span>
-<span style="font-size: 12px; font-weight: 500; color: #475569; background: #F1F5F9; border-radius: 999px; padding: 4px 12px">LITEON · with the R&amp;D department · 2026</span>
-</div>
-<h1 style="font-size: 48px; line-height: 1.08; font-weight: 700; letter-spacing: -0.03em">PCB Placement Multi-Agent POC</h1>
-<p style="font-size: 19px; line-height: 1.6; color: #334155; max-width: 760px">Can agents take on part of an engineering design flow? This POC tests it on one step: placing components on a KiCad board, from schematic and confirmed requirements to checked, delivered files.</p>
-<p style="font-size: 14px; color: #64748B">Scope: placement only. Not routing, not manufacturing.</p>
-</div>
+<main class="wrap">
 
-<div style="aspect-ratio: 16 / 9; background: #F0F9FF; border-radius: 18px; display: flex; align-items: center; justify-content: center; position: relative">
-<div style="position: absolute; inset: 22px; border: 2px dashed #7DD3FC; border-radius: 12px"></div>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: 0 48px">
-<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#0369A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M10 8l6 4-6 4z"></path></svg>
-<p style="font-size: 18px; font-weight: 600; color: #075985">[ Screen recording · 60–90 s, on an open-source KiCad sample board ]</p>
-<p style="font-size: 14px; color: #0369A1; max-width: 560px; line-height: 1.6">Requirement Q&amp;A → live run status as each agent works → layout preview → a gate rejecting a bad result → files downloaded.</p>
+<div style="display:flex;flex-direction:column;gap:20px">
+<a href="index.html#work" style="font-size:14px;font-weight:600">← All work</a>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<span class="tag on">Claude Agent SDK</span>
+<span class="tag">LITEON · with the R&amp;D department · 2026</span>
 </div>
+<h1 style="font-size:48px;line-height:1.08;font-weight:700;letter-spacing:-0.03em">PCB Placement Multi-Agent POC</h1>
+<p style="font-size:19px;line-height:1.6;color:#334155;max-width:760px">Can agents take on part of an engineering design flow? This POC tests it on one step: placing components on a KiCad board, from schematic and confirmed requirements to checked, delivered files.</p>
+<p style="font-size:14px;color:#64748B">Scope: placement only. Not routing, not manufacturing.</p>
 </div>
 
-<section style="display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Architecture</p>
-<h2 style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Four agents, and code that keeps them in bounds</h2>
+<!-- Demo -->
+<section class="sec" id="demo" aria-labelledby="demo-h">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<div class="sec-head">
+<p class="eyebrow">Demo</p>
+<h2 id="demo-h">One run, start to finish</h2>
 </div>
-<div style="display: flex; align-items: stretch; gap: 10px; flex-wrap: wrap">
-<div style="flex: 0 0 110px; background: #F1F5F9; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; justify-content: center; gap: 4px"><span style="font-size: 14px; font-weight: 600">Engineer</span><span style="font-size: 12px; color: #64748B">schematic + needs</span></div>
-<span style="align-self: center; color: #94A3B8; font-size: 20px">→</span>
-<div style="flex: 1 1 150px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">AGENT 1</span><span style="font-size: 15px; font-weight: 600">Requirements coordination</span><span style="font-size: 13px; color: #64748B">Asks, confirms constraints</span></div>
-<span style="align-self: center; color: #94A3B8; font-size: 20px">→</span>
-<div style="flex: 1 1 150px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">AGENT 2</span><span style="font-size: 15px; font-weight: 600">Placement</span><span style="font-size: 13px; color: #64748B">Moves parts via KiCad CLI</span></div>
-<span style="align-self: center; color: #94A3B8; font-size: 20px">→</span>
-<div style="flex: 1 1 150px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">AGENT 3</span><span style="font-size: 15px; font-weight: 600">Manufacturability review</span><span style="font-size: 13px; color: #64748B">Flags problems</span></div>
-<span style="align-self: center; color: #94A3B8; font-size: 20px">→</span>
-<div style="flex: 1 1 150px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">AGENT 4</span><span style="font-size: 15px; font-weight: 600">Acceptance</span><span style="font-size: 13px; color: #64748B">Signs off delivery</span></div>
+<div class="picks" role="group" aria-label="Choose a test case">
+<button class="pick is-on" data-case="05" aria-pressed="true">Case 05 · 5 V regulator · 14 parts</button>
+<button class="pick" data-case="01" aria-pressed="false">Case 01 · LED + button · 4 parts</button>
 </div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-<div style="background: #0F172A; color: #FFFFFF; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5EEAD4">Enforced in Python, not in prompts</p>
-<p style="font-size: 15px; line-height: 1.7; color: #E2E8F0">Tool allowlists per agent · write restrictions · delivery gates</p>
 </div>
-<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
-<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0F766E">Tool layer</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">KiCad CLI exposed to the agents through MCP</p>
+<div class="player">
+<video id="demo-video" controls muted playsinline preload="metadata" poster="assets/pcb/case-05-poster.jpg" aria-describedby="demo-cap">
+<source src="assets/pcb/case-05.mp4" type="video/mp4">
+</video>
+</div>
+<div class="steps" id="steps" role="group" aria-label="Jump to a stage"></div>
+<p class="caption" id="demo-cap">Replay of a recorded run, compressed to about a minute; the interface is in Traditional Chinese. The four cards at the top light up as each agent works, and the preview on the left refreshes with every new layout. The engineer answers the agent's questions and approves the layout before anything is delivered.</p>
+</section>
+
+<!-- Architecture -->
+<section class="sec" aria-labelledby="arch-h">
+<div class="sec-head">
+<p class="eyebrow">Architecture</p>
+<h2 id="arch-h">Four agents, and code that keeps them in bounds</h2>
+<p class="lede">A lead agent talks with the engineer and hands out work. The rules that matter are not in any prompt: Python hooks check every tool call, so an agent cannot step outside its role even if it tries.</p>
+</div>
+
+<div class="arch" role="img" aria-label="Architecture: the engineer uses a local web app; a runner built on the Claude Agent SDK hosts a lead session with lead, placement and DFM agents, plus an isolated acceptance agent; Python hooks check every tool call before it reaches KiCad, the PCB MCP server or the job workspace.">
+<div class="arch-row">
+<div class="node soft" style="flex:0 1 200px"><b>Engineer</b><span>Uploads schematic, answers questions, approves</span></div>
+<div class="node"><b>Local web app</b><span>FastAPI · live progress over SSE</span></div>
+<div class="node"><b>Runner</b><span>Claude Agent SDK · token budget per job</span></div>
+<div class="node soft" style="flex:0 1 180px"><b>Model API</b><span>Opus · Sonnet</span></div>
+</div>
+<div class="link">starts a job</div>
+<div class="arch-row">
+<div class="zone">
+<p class="zl">Lead session</p>
+<div class="node agent"><b>Lead · Opus</b><span>Clarifies requirements, assigns work, decides on review feedback</span></div>
+<div class="arch-row">
+<div class="node writer"><span class="badge">1</span><b>Placement · Opus</b><span>The only agent that can change the board</span></div>
+<div class="node agent"><b>DFM · Sonnet</b><span>Manufacturability review · read-only</span></div>
+</div>
+</div>
+<div class="zone iso">
+<span class="badge">3</span>
+<p class="zl">Isolated acceptance</p>
+<div class="node agent"><b>Acceptance · Sonnet</b><span>Read-only. Gets input assembled by code, never placement's own account</span></div>
+</div>
+</div>
+<div class="link">every tool call passes through</div>
+<div class="gate">
+<span class="badge">2</span>
+<b>Python hooks</b>
+<span>Allowlists · write scope · delivery gate · stop after 3 failures</span>
+</div>
+<div class="link">only then reaches</div>
+<div class="arch-row">
+<div class="node"><b>KiCad CLI</b><span>Board edits, design-rule checks, previews</span></div>
+<div class="node"><b>PCB MCP server</b><span>Schematic-to-layout tools</span></div>
+<div class="node"><b>Job workspace</b><span>Inputs, board versions, decisions, logs</span></div>
+</div>
+</div>
+
+<div class="g3">
+<div class="num-card"><span class="n">1</span><span class="t">One writer</span><span class="d">Each agent has its own tool allowlist. Only placement can modify the board; DFM and acceptance can look but not touch.</span></div>
+<div class="num-card"><span class="n">2</span><span class="t">Gates in code, not prompts</span><span class="d">Delivery needs a passed acceptance and the engineer's approval. If the board changes after approval, the approval is void. Three failures in a row stop the job.</span></div>
+<div class="num-card"><span class="n">3</span><span class="t">Acceptance can't be talked into passing</span><span class="d">Its input is built by code from the engineer's own material. It never sees what placement claims it did, and the lead can't write it.</span></div>
+</div>
+</section>
+
+<!-- Verification -->
+<section class="sec" aria-labelledby="ver-h">
+<div class="sec-head">
+<p class="eyebrow">Verification</p>
+<h2 id="ver-h">Don&#39;t take the model&#39;s word for it</h2>
+<p class="lede">An agent saying “done” is not evidence. Every output is checked by code before it can be delivered.</p>
+</div>
+<div class="g3">
+<div class="card"><span class="t">Schematic–PCB consistency</span><span class="d">Parts, pins and nets still match the schematic.</span></div>
+<div class="card"><span class="t">Geometry checks</span><span class="d">KiCad design rules pass, plus size, spacing, keep-out and test-point requirements.</span></div>
+<div class="card"><span class="t">File-hash comparison</span><span class="d">Delivered files are the ones that were checked.</span></div>
+</div>
+<div class="g2">
+<div class="board">
+<div class="img"><img src="assets/pcb/board-05.png" alt="Delivered layout for case 05: a 5 V linear regulator board with input terminal, diode, regulator, two electrolytic capacitors and four test points" width="740" height="490" loading="lazy"></div>
+<div class="body">
+<span class="t">Case 05 · 5 V regulator</span>
+<dl class="facts">
+<div><dt>Board</dt><dd>38.1 × 25.25 mm</dd></div>
+<div><dt>Parts</dt><dd>14</dd></div>
+<div><dt>Design-rule check</dt><dd>0 errors · 0 warnings</dd></div>
+<div><dt>Acceptance</dt><dd>Passed · 15 / 15</dd></div>
+</dl>
+</div>
+</div>
+<div class="board">
+<div class="img"><img src="assets/pcb/board-01.png" alt="Delivered layout for case 01: a small board with a two-pin header, resistor, LED and a tactile push button" width="740" height="340" loading="lazy"></div>
+<div class="body">
+<span class="t">Case 01 · LED + button</span>
+<dl class="facts">
+<div><dt>Board</dt><dd>18.45 × 8.5 mm</dd></div>
+<div><dt>Parts</dt><dd>4</dd></div>
+<div><dt>Design-rule check</dt><dd>0 errors · 0 warnings</dd></div>
+<div><dt>Acceptance</dt><dd>Passed · 15 / 15</dd></div>
+</dl>
+</div>
 </div>
 </div>
 </section>
 
-<section style="display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Verification</p>
-<h2 style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Don&#39;t take the model&#39;s word for it</h2>
-<p style="font-size: 15px; color: #475569; max-width: 680px; line-height: 1.6">An agent saying “done” is not evidence. Every output is checked by code before it can be delivered.</p>
+<!-- Comparison -->
+<section class="sec" aria-labelledby="cmp-h">
+<div class="sec-head">
+<p class="eyebrow">Comparison</p>
+<h2 id="cmp-h">Single agent or multi-agent?</h2>
+<p class="lede">Alongside this system I built a single-agent Claude Code plugin, run from the Claude CLI. Both got the same schematics, requirements and main model, and both outputs went through the same checks.</p>
 </div>
-<div class="g3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
-<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 16px; font-weight: 600">Schematic–PCB consistency</span><span style="font-size: 14px; color: #64748B; line-height: 1.6">The board still matches the schematic.</span></div>
-<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 16px; font-weight: 600">Geometry checks</span><span style="font-size: 14px; color: #64748B; line-height: 1.6">Placement meets the spatial rules.</span></div>
-<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 16px; font-weight: 600">File-hash comparison</span><span style="font-size: 14px; color: #64748B; line-height: 1.6">Delivered files are the ones that were checked.</span></div>
+<div class="stats">
+<div class="stat"><span class="l">Boards passing all checks</span><span class="v">4 / 4</span><span class="c">Both approaches, both cases</span></div>
+<div class="stat"><span class="l">Single agent's token use</span><span class="v">~1/4</span><span class="c">Multi-agent used 3.5–4.6× the tokens and 1.8–2.8× the time</span></div>
+<div class="stat"><span class="l">Smaller boards, multi-agent</span><span class="v">11–21%</span><span class="c">It tried more board sizes before settling</span></div>
+<div class="stat"><span class="l">Issues caught by acceptance</span><span class="v">0</span><span class="c">All 4 acceptance runs passed first time</span></div>
 </div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 10px"><div style="aspect-ratio: 4 / 3; background: #E2E8F0; border-radius: 14px; display: flex; align-items: center; justify-content: center"><p style="font-size: 15px; font-weight: 600; color: #475569">[ Before: unplaced board ]</p></div><p style="font-size: 13px; color: #64748B">Sample board, components unplaced</p></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><div style="aspect-ratio: 4 / 3; background: #E2E8F0; border-radius: 14px; display: flex; align-items: center; justify-content: center"><p style="font-size: 15px; font-weight: 600; color: #475569">[ After: agent placement ]</p></div><p style="font-size: 13px; color: #64748B">Same board after placement and review</p></div>
+<div class="g2">
+<div class="fit">
+<span class="h">Single-agent plugin</span>
+<span class="k">Fits better when</span>
+<p>The board is small, the requirements are clear, and a person reviews the result carefully. Just as correct here, at a fraction of the cost.</p>
+<p class="cost">Watch out: it skipped the required engineer review on case 05. The rule lived only in its instructions.<br>Est. US$1.57–1.75 per case at list price.</p>
+</div>
+<div class="fit multi">
+<span class="h">Multi-agent system</span>
+<span class="k">Fits better when</span>
+<p>Review must be guaranteed and an audit trail matters, or the board should be as small as possible. Code refuses to deliver until the engineer approves.</p>
+<p class="cost">Most of the extra cost came from handoffs between the lead and placement agents.<br>Est. US$3.06–4.87 per case at list price.</p>
+</div>
+</div>
+<p class="takeaway"><strong>The clearest gain was a guaranteed process, not higher accuracy.</strong> These two cases don't show that an extra acceptance agent catches more errors: it also missed a contradiction in one case's requirements.</p>
+<div class="g2" style="gap:24px 48px">
+<div style="display:flex;flex-direction:column;gap:10px">
+<p class="eyebrow" style="color:#475569">Limits</p>
+<ul class="plain">
+<li>2 cases, 1 run each: no claim about success rate or stability</li>
+<li>Placement only, checked in CAD; not routed or built</li>
+<li>The single agent's questions were answered with scripted replies</li>
+</ul>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px">
+<p class="eyebrow" style="color:#475569">What I'd change next</p>
+<ul class="plain">
+<li>Single agent: turn the review rule into a tool-level hard check</li>
+<li>Multi-agent: cut repeated reading in lead–placement handoffs</li>
+<li>Acceptance: check requirements for clauses that contradict each other</li>
+</ul>
+</div>
 </div>
 </section>
 
-<section style="display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Comparison</p>
-<h2 style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Single agent or multi-agent?</h2>
-<p style="font-size: 15px; color: #475569; max-width: 680px; line-height: 1.6">I also built a single-agent plugin and ran both on the same small circuit cases, to judge where each approach fits.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
-<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px"><span style="font-size: 17px; font-weight: 600">Single-agent plugin</span><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Fits better when</span><span style="font-size: 15px; color: #94A3B8">[ your finding ]</span></div>
-<div style="background: #FFFFFF; border: 1px solid #0F766E; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 12px"><span style="font-size: 17px; font-weight: 600">Multi-agent system</span><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Fits better when</span><span style="font-size: 15px; color: #94A3B8">[ your finding ]</span></div>
-</div>
-<div style="aspect-ratio: 16 / 7; background: #E2E8F0; border-radius: 14px; display: flex; align-items: center; justify-content: center"><p style="font-size: 15px; font-weight: 600; color: #475569">[ Screenshot: local FastAPI + SSE interface ]</p></div>
+<section style="display:flex;flex-wrap:wrap;gap:24px 48px;border-top:1px solid #E2E8F0;padding-top:32px">
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:8px"><p class="eyebrow">Built with</p><p style="font-size:15px;color:#334155;line-height:1.7">Python · Claude Agent SDK · MCP · KiCad CLI · FastAPI · SSE · Claude Code</p></div>
+<div style="flex:1 1 300px;display:flex;flex-direction:column;gap:8px"><p class="eyebrow">Status</p><p style="font-size:15px;color:#334155;line-height:1.7">Proof of concept, validated on small circuit cases. Not productized.</p></div>
 </section>
 
-<section style="display: flex; flex-wrap: wrap; gap: 24px 48px; border-top: 1px solid #E2E8F0; padding-top: 32px">
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px"><p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Built with</p><p style="font-size: 15px; color: #334155; line-height: 1.7">Python · Claude Agent SDK · MCP · KiCad CLI · FastAPI · SSE · Claude Code</p></div>
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px"><p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Status</p><p style="font-size: 15px; color: #334155; line-height: 1.7">Proof of concept, validated on small circuit cases. Not productized.</p></div>
-</section>
+</main>
 
-</div>
-</div>
+<script>
+(function(){
+  var cases={
+    '05':{src:'assets/pcb/case-05.mp4',poster:'assets/pcb/case-05-poster.jpg',steps:[
+      [0,'Requirements'],[7,'Placement'],[29,'DFM review'],[43,'Acceptance'],[48,'Engineer review'],[52,'Final checks'],[67,'Delivered']]},
+    '01':{src:'assets/pcb/case-01.mp4',poster:'assets/pcb/case-01-poster.jpg',steps:[
+      [0,'Requirements Q&amp;A'],[8,'Placement'],[26,'DFM review'],[29,'Acceptance'],[33,'Engineer review'],[37,'Final checks'],[52,'Delivered']]}
+  };
+  var video=document.getElementById('demo-video');
+  var stepsEl=document.getElementById('steps');
+  var picks=Array.prototype.slice.call(document.querySelectorAll('.pick'));
+  var current='05', buttons=[];
+  function fmt(s){return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+  function renderSteps(){
+    stepsEl.innerHTML='';
+    buttons=cases[current].steps.map(function(st){
+      var b=document.createElement('button');
+      b.type='button';b.className='step';
+      b.innerHTML='<span class="k">'+fmt(st[0])+'</span><span class="t">'+st[1]+'</span>';
+      b.addEventListener('click',function(){
+        video.currentTime=st[0];
+        var p=video.play(); if(p&&p.catch){p.catch(function(){});}
+      });
+      stepsEl.appendChild(b);return b;
+    });
+    highlight();
+  }
+  function highlight(){
+    var t=video.currentTime||0, steps=cases[current].steps, idx=0;
+    for(var i=0;i<steps.length;i++){if(t>=steps[i][0]-0.05){idx=i;}}
+    buttons.forEach(function(b,i){
+      var on=i===idx; b.classList.toggle('is-on',on);
+      if(on){b.setAttribute('aria-current','step');}else{b.removeAttribute('aria-current');}
+    });
+  }
+  function setCase(id){
+    if(id===current){return;}
+    current=id;
+    picks.forEach(function(p){var on=p.dataset.case===id;p.classList.toggle('is-on',on);p.setAttribute('aria-pressed',String(on));});
+    video.pause();video.poster=cases[id].poster;video.src=cases[id].src;video.load();
+    renderSteps();
+  }
+  picks.forEach(function(p){p.addEventListener('click',function(){setCase(p.dataset.case);});});
+  video.addEventListener('timeupdate',highlight);
+  video.addEventListener('seeked',highlight);
+  renderSteps();
+})();
+</script>
 </body>
 </html>
