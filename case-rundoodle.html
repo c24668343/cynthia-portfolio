@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>RunDoodle · Cynthia Pan</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F766E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8FAFC;color:#0F172A;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0F766E;text-decoration:none}a:hover{color:#115E59;text-decoration:underline;text-underline-offset:3px}
+h1,h2,h3,p{margin:0}
+button{font-family:inherit;cursor:pointer}
+.pick{font-size:14px;font-weight:500;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid #CBD5E1;background:#FFFFFF;color:#334155}
+.pick.is-on{font-weight:600;border-color:#0F766E;background:#0F766E;color:#FFFFFF}
+.step{min-height:64px;text-align:left;padding:12px 14px;border-radius:10px;border:1px solid #E2E8F0;background:#FFFFFF;color:#334155;display:flex;flex-direction:column;gap:2px}
+.step .k{font-size:11px;font-weight:700;color:#64748B}.step .t{font-size:14px;font-weight:600}
+.step.is-on{border-color:#0F766E;background:#0F766E;color:#FFFFFF}.step.is-on .k{color:#CCFBF1}
+@media (max-width:760px){.g5,.g4,.g3{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
+</head>
+<body>
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(248,250,252,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #E2E8F0">
+<div style="max-width: 1040px; margin: 0 auto; padding: 0 32px; height: 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between">
+<a href="preview.html" style="font-size: 16px; font-weight: 700; color: #0F172A">Cynthia Pan</a>
+<a href="preview.html#work" style="font-size: 14px; font-weight: 600">All work</a>
+</div>
+</header>
+<div style="font-family: 'Inter', system-ui, sans-serif; color: #0F172A; background: #F8FAFC; width: 100%">
+<div style="max-width: 1040px; margin: 0 auto; padding: 48px 32px 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 72px">
+
+<div style="display: flex; flex-direction: column; gap: 20px">
+<a href="preview.html#work" style="font-size: 14px; font-weight: 600">← All work</a>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 4px 12px">Google ADK</span>
+<span style="font-size: 12px; font-weight: 500; color: #475569; background: #F1F5F9; border-radius: 999px; padding: 4px 12px">Personal project · Jul–Aug 2026</span>
+</div>
+<h1 style="font-size: 52px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em">RunDoodle</h1>
+<p style="font-size: 19px; line-height: 1.6; color: #334155; max-width: 720px">A multi-agent system that turns a plain-language request (a place, a distance and a shape) into a GPS-art route you can actually run, previews it on a map and exports it as GPX.</p>
+</div>
+
+<div style="aspect-ratio: 16 / 9; background: #ECFDF5; border-radius: 18px; display: flex; align-items: center; justify-content: center; position: relative">
+<div style="position: absolute; inset: 22px; border: 2px dashed #5EEAD4; border-radius: 12px"></div>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: 0 48px">
+<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#0F766E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M10 8l6 4-6 4z"></path></svg>
+<p style="font-size: 18px; font-weight: 600; color: #115E59">[ Screen recording · about 60 s ]</p>
+<p style="font-size: 14px; color: #0F766E; max-width: 520px; line-height: 1.6">Request typed in → agents working (status shown) → route drawn on the map → similarity score → GPX downloaded. Captions name each stage.</p>
+</div>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">How it works</p>
+<h2 style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Five agents, one quality gate</h2>
+</div>
+<div class="g5" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px">
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">01</span><span style="font-size: 15px; font-weight: 600">Intent parsing</span><span style="font-size: 13px; color: #64748B; line-height: 1.5">Place, distance, shape</span></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">02</span><span style="font-size: 15px; font-weight: 600">Shape design</span><span style="font-size: 13px; color: #64748B; line-height: 1.5">Draws the outline</span></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">03</span><span style="font-size: 15px; font-weight: 600">Road network</span><span style="font-size: 13px; color: #64748B; line-height: 1.5">OSM streets around the area</span></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">04</span><span style="font-size: 15px; font-weight: 600">Placement search</span><span style="font-size: 13px; color: #64748B; line-height: 1.5">KDTree pre-screen, top 3 routed</span></div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 700; color: #0F766E">05</span><span style="font-size: 15px; font-weight: 600">Evaluation</span><span style="font-size: 13px; color: #64748B; line-height: 1.5">Scores the result</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: stretch">
+<div style="flex: 2 1 420px; background: #0F172A; color: #FFFFFF; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5EEAD4">Quality gate</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<span style="font-size: 13px; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px">Multimodal visual judge</span>
+<span style="font-size: 13px; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px">Deterministic geometry checks</span>
+<span style="font-size: 13px; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px">Discrete Fréchet similarity</span>
+</div>
+<p style="font-size: 14px; color: #CBD5E1; line-height: 1.6">A failed design is retried a bounded number of times. If it still fails, routing stops and the user gets a structured failure report instead of a bad route.</p>
+</div>
+<div style="flex: 1 1 240px; display: flex; flex-direction: column; gap: 12px">
+<div style="flex: 1; background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 14px; padding: 18px"><p style="font-size: 14px; font-weight: 600; color: #065F46">Pass →</p><p style="font-size: 14px; color: #065F46; margin-top: 4px">Route on map + GPX export</p></div>
+<div style="flex: 1; background: #FFF7ED; border: 1px solid #FED7AA; border-radius: 14px; padding: 18px"><p style="font-size: 14px; font-weight: 600; color: #9A3412">Fail →</p><p style="font-size: 14px; color: #9A3412; margin-top: 4px">Structured failure report</p></div>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Results</p>
+<h2 style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Routes it generated</h2>
+<p style="font-size: 15px; color: #475569">Pick a route. In the real page this map is live (Leaflet + saved GeoJSON), so it works without any API key.</p>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<button class="pick is-on" data-i="0" aria-pressed="true">Route 1</button>
+<button class="pick" data-i="1" aria-pressed="false">Route 2</button>
+<button class="pick" data-i="2" aria-pressed="false">Route 3</button>
+<button class="pick" data-i="3" aria-pressed="false">Route 4</button>
+<button class="pick" data-i="4" aria-pressed="false">Route 5</button>
+<button class="pick" data-i="5" aria-pressed="false">Route 6</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 2 1 480px; aspect-ratio: 4 / 3; background: #E2E8F0; border-radius: 14px; display: flex; align-items: center; justify-content: center; position: relative">
+<div style="position: absolute; inset: 16px; border: 2px dashed #94A3B8; border-radius: 10px"></div>
+<p style="font-size: 15px; font-weight: 600; color: #475569; text-align: center; padding: 0 32px">[ Interactive map · <span id="route-label">Route 1</span> route ]</p>
+</div>
+<div style="flex: 1 1 240px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Request</span><span style="font-size: 15px">[ the prompt you typed ]</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Distance</span><span style="font-size: 15px">[ km ]</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Fréchet similarity</span><span style="font-size: 15px">[ score ]</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Retries used</span><span style="font-size: 15px">[ n ]</span></div>
+<span style="font-size: 14px; font-weight: 600; color: #0F766E; margin-top: auto">Download GPX ↓</span>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Evaluation</p>
+<h2 style="font-size: 30px; font-weight: 700; letter-spacing: -0.02em">Can the AI judge be trusted?</h2>
+<p style="font-size: 15px; color: #475569; max-width: 680px; line-height: 1.6">A blind test of 10 themes × 3 runs compared the multimodal judge with human review, to see where the judge agrees with people and where it does not.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 400px; min-height: 280px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; display: flex; align-items: center; justify-content: center; padding: 24px"><p style="font-size: 15px; font-weight: 600; color: #64748B; text-align: center">[ Chart: AI judge vs human, per theme ]</p></div>
+<div style="flex: 1 1 400px; min-height: 280px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; display: flex; flex-direction: column; gap: 12px; padding: 24px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9A3412">A rejected design</span>
+<div style="flex: 1; background: #F8FAFC; border-radius: 10px; display: flex; align-items: center; justify-content: center"><p style="font-size: 14px; color: #64748B">[ shape image ]</p></div>
+<code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; background: #0F172A; color: #E2E8F0; border-radius: 8px; padding: 12px; white-space: pre-line">[ excerpt of the structured failure report ]</code>
+</div>
+</div>
+<div class="g3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<div style="border-top: 2px solid #0F766E; padding-top: 14px"><p style="font-size: 32px; font-weight: 700; color: #0F766E">213</p><p style="font-size: 14px; color: #475569">Python offline tests</p></div>
+<div style="border-top: 2px solid #0F766E; padding-top: 14px"><p style="font-size: 32px; font-weight: 700; color: #0F766E">16</p><p style="font-size: 14px; color: #475569">Frontend offline tests</p></div>
+<div style="border-top: 2px solid #0F766E; padding-top: 14px"><p style="font-size: 32px; font-weight: 700; color: #0F766E">10 × 3</p><p style="font-size: 14px; color: #475569">Blind-test themes × runs</p></div>
+</div>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 24px 48px; border-top: 1px solid #E2E8F0; padding-top: 32px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px"><p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Built with</p><p style="font-size: 15px; color: #334155; line-height: 1.7">Python · Google ADK · LiteLLM · Flask · OSM · OSRM · Google Routes · Google Maps · pytest</p></div>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 8px"><p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">How I built it</p><p style="font-size: 15px; color: #334155; line-height: 1.7">Claude Code with Matt Pocock&#39;s skills: spec, vertical slices, TDD, code review. Design trade-offs recorded as ADRs.</p></div>
+</section>
+
+</div>
+</div>
+<script>
+document.querySelectorAll('.pick').forEach(function(b){b.addEventListener('click',function(){
+document.querySelectorAll('.pick').forEach(function(o){o.classList.remove('is-on');o.setAttribute('aria-pressed','false')});
+b.classList.add('is-on');b.setAttribute('aria-pressed','true');
+document.getElementById('route-label').textContent=b.textContent;});});
+</script>
+</body>
+</html>
