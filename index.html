@@ -18,6 +18,7 @@ body{margin:0;background:#F8FAFC;color:#0F172A;font-family:'Inter',system-ui,san
 a{color:#0F766E;text-decoration:none}a:hover{color:#115E59;text-decoration:underline;text-underline-offset:3px}
 h1,h2,h3,p,ul{margin:0}
 table{border-collapse:collapse;width:100%}
+.work-card{transition:box-shadow .15s ease,border-color .15s ease}.work-card:hover{text-decoration:none!important;border-color:#99F6E4!important;box-shadow:0 6px 24px rgba(15,23,42,.08)}
 .entry{transition:background-color .15s ease,box-shadow .15s ease}
 .entry:hover{background:#FFFFFF;box-shadow:0 1px 2px rgba(15,23,42,.06),0 0 0 1px #E2E8F0}
 .tab{display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:#475569;border-bottom:2px solid transparent;white-space:nowrap}
@@ -34,352 +35,222 @@ table{border-collapse:collapse;width:100%}
 .sec-h{flex:0 0 180px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0F172A;line-height:1.5;position:sticky;top:96px;align-self:flex-start;padding-top:28px}
 .sec-body{flex:1 1 560px;min-width:0;display:flex;flex-direction:column;gap:16px}
 @media (max-width:860px){.sec-h{position:static;padding-top:0}.sec-in{padding:56px 24px}.hide-sm{display:none}}
+.work-card{transition:box-shadow .15s ease,border-color .15s ease}.work-card:hover{text-decoration:none!important;border-color:#99F6E4!important;box-shadow:0 6px 24px rgba(15,23,42,.08)}
+@media (max-width:860px){.g3,.g2{grid-template-columns:minmax(0,1fr)!important}}
 </style>
 </head>
 <body>
-<div id="top" style="background: #F8FAFC; color: #0F172A; font-family: 'Inter', system-ui, sans-serif; width: 100%">
+<div id="top" style="font-family: 'Inter', system-ui, sans-serif; color: #0F172A; background: #F8FAFC; width: 100%">
+<main>
 
 <!-- TOP TAB BAR -->
 <header style="position: sticky; top: 0; z-index: 50; background: rgba(248,250,252,0.9); -webkit-backdrop-filter: saturate(180%) blur(12px); backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid #E2E8F0">
 <div style="max-width: 1120px; margin: 0 auto; padding: 0 32px; height: 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 24px">
 <a href="#top" style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em; color: #0F172A; white-space: nowrap">Cynthia Pan</a>
 <nav aria-label="Sections" style="position: relative; display: flex; align-items: stretch; align-self: stretch; gap: 4px; overflow-x: auto; min-width: 0">
-<a class="tab" href="#experience">Experience</a>
+<a class="tab" href="#work">Work</a>
 <a class="tab" href="#projects">Projects</a>
 <a class="tab" href="#research">Research</a>
 <a class="tab" href="#education">Education</a>
+<a class="tab" href="#others">Others</a>
 </nav>
 </div>
 </header>
 
-<main>
-
-<!-- HERO -->
-<section style="background: radial-gradient(760px 460px at 88% 18%, rgba(15,118,110,0.11), rgba(15,118,110,0) 70%)">
-<div style="max-width: 1120px; margin: 0 auto; padding: 72px 32px 72px; box-sizing: border-box; display: flex; flex-direction: column; gap: 64px">
-
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px 56px">
-<div style="flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<section style="max-width: 1120px; margin: 0 auto; padding: 72px 32px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 48px 56px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 <span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 6px 14px">AI Application Engineer</span>
-<h1 style="font-size: clamp(44px, 5.6vw, 72px); line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">Cynthia Pan</h1>
-<p style="font-size: 17px; line-height: 1.75; color: #334155; max-width: 580px">AI Data Application Engineer at <strong style="color: #0F172A; font-weight: 600">LITEON Technology</strong>, bringing LLMs and AI agents into workflows by clarifying needs and process boundaries, then deciding where AI fits and how its output is checked. Contributed to an HR complaint system where a multimodal LLM drafts notices, and explored agentic PCB design in a multi-agent POC with R&amp;D. Self-taught in Google ADK and built a GPS-art running-route agent. M.S. in Industrial Engineering, <strong style="color: #0F172A; font-weight: 600">National Tsing Hua University</strong> (GPA 4.16 / 4.3).</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px">
-<a href="mailto:c24668343@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; color: #334155">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>c24668343@gmail.com</a>
-<a href="tel:+886916625023" style="display: inline-flex; align-items: center; gap: 10px; color: #334155">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>+886 916 625 023</a>
-<span style="display: inline-flex; align-items: center; gap: 10px; color: #334155">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>Taipei · Hsinchu, Taiwan</span>
+<h1 style="font-size: 68px; line-height: 1.02; font-weight: 700; letter-spacing: -0.035em">Cynthia Pan</h1>
+<p style="font-size: 17px; line-height: 1.75; color: #334155; max-width: 580px">AI Data Application Engineer at <strong style="color: #0F172A; font-weight: 600">LITEON Technology</strong>, bringing LLMs and AI agents into workflows by clarifying needs and process boundaries, then deciding where AI fits and how its output is checked. Contributed to an HR complaint system where a multimodal LLM drafts notices, and explored agentic PCB design in a multi-agent POC with R&amp;D. Independently built a GPS-art running agent with Google ADK. M.S. in Industrial Engineering, <strong style="color: #0F172A; font-weight: 600">National Tsing Hua University</strong> (GPA 4.16 / 4.3).</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #334155">
+<span>c24668343@gmail.com</span><span>+886 916 625 023</span><span>Taipei · Hsinchu, Taiwan</span>
 </div>
+</div>
+<div style="flex: 0 1 320px; min-width: 220px; margin: 0 auto">
+<img src="assets/portrait.jpg" alt="Portrait of Cynthia Pan" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 60%; border-radius: 24px">
+</div>
+</section>
+
+<section id="work" style="scroll-margin-top: 64px; max-width: 1120px; margin: 0 auto; padding: 96px 32px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Selected work</p>
+<h2 style="font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em">Agents I designed, built and tested</h2>
 </div>
 
-<div style="flex: 0 1 340px; min-width: 220px; position: relative; margin: 0 auto">
-<div style="position: absolute; inset: 18px -18px -18px 18px; border: 1.5px solid #0F766E; border-radius: 24px; opacity: 0.35"></div>
-<img src="assets/portrait.jpg" alt="Portrait of Cynthia Pan" style="position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 60%; border-radius: 24px; border: 1px solid #E2E8F0; box-shadow: 0 28px 56px -28px rgba(15,23,42,0.4)">
+<a class="work-card" href="case-pcb.html" style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; color: #0F172A">
+<div style="flex: 1.3 1 440px; min-height: 320px; background: #F0FDFA; display: flex; align-items: center; justify-content: center; position: relative; padding: 28px; box-sizing: border-box">
+<div style="position: absolute; inset: 18px; border: 2px dashed #99F6E4; border-radius: 12px"></div>
+<p style="position: relative; font-size: 14px; font-weight: 600; color: #115E59; text-align: center; max-width: 360px; line-height: 1.6">[ 10-second loop: components snapping into place on a sample board ]</p>
 </div>
+<div style="flex: 1 1 340px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; justify-content: center">
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 4px 12px">Claude Agent SDK</span>
+<span style="font-size: 12px; font-weight: 500; color: #475569; background: #F1F5F9; border-radius: 999px; padding: 4px 12px">LITEON · with R&amp;D · 2026</span>
 </div>
+<h3 style="font-size: 24px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">PCB Placement Multi-Agent POC</h3>
+<p style="font-size: 15px; line-height: 1.65; color: #334155">Four agents place components in KiCad through MCP. Every result is checked by code, not by the model&#39;s own report.</p>
+<p style="font-size: 13px; color: #475569">4 agents · 3 code checks · 2 approaches compared</p>
+<span style="font-size: 15px; font-weight: 600; color: #0F766E">View case study →</span>
+</div>
+</a>
 
-<div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px">
-<div style="flex: 1 1 280px; min-width: 280px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 26px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; color: #0F766E">2</span>
-<span style="font-size: 14px; font-weight: 600; color: #0F172A">Multi-agent systems on two SDKs</span>
+
+<a class="work-card" href="case-hr.html" style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; color: #0F172A">
+<div style="flex: 1.3 1 440px; min-height: 320px; background: #F0FDFA; display: flex; align-items: center; justify-content: center; position: relative; padding: 28px; box-sizing: border-box">
+<div style="position: absolute; inset: 18px; border: 2px dashed #99F6E4; border-radius: 12px"></div>
+<p style="position: relative; font-size: 14px; font-weight: 600; color: #115E59; text-align: center; max-width: 360px; line-height: 1.6">[ Illustrative process diagram, stepping through one invented case ]</p>
 </div>
-<div style="flex: 1; border-top: 1px solid #E2E8F0; padding-top: 16px; display: flex; flex-direction: column; justify-content: space-around; gap: 14px">
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="align-self: flex-start; font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 3px 10px; margin-bottom: 4px">Claude Agent SDK</span><span style="font-size: 14px; font-weight: 600; color: #0F172A">PCB placement multi-agent POC</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Work POC with R&amp;D · MCP, KiCad</span></div>
-<div style="display: flex; flex-direction: column; gap: 2px"><span style="align-self: flex-start; font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 3px 10px; margin-bottom: 4px">Google ADK</span><span style="font-size: 14px; font-weight: 600; color: #0F172A">RunDoodle route planner</span><span style="font-size: 13px; line-height: 1.5; color: #64748B">Personal project · multimodal evaluation</span></div>
+<div style="flex: 1 1 340px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; justify-content: center">
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 4px 12px">LLM integration</span>
+<span style="font-size: 12px; font-weight: 500; color: #475569; background: #F1F5F9; border-radius: 999px; padding: 4px 12px">LITEON · with HR · 2026</span>
 </div>
+<h3 style="font-size: 24px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">Workplace Bullying Complaint System</h3>
+<p style="font-size: 15px; line-height: 1.65; color: #334155">A statutory process turned into tracked paths, deadlines and documents, with an LLM drafting notices for HR to review.</p>
+<p style="font-size: 13px; color: #475569">5 closure paths · 13 auto-filled documents · 15 tracked deadlines</p>
+<span style="font-size: 15px; font-weight: 600; color: #0F766E">View case study →</span>
 </div>
-<div style="flex: 1.6 1 420px; min-width: 280px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 26px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; color: #0F766E">AI-first</span>
-<span style="font-size: 14px; font-weight: 600; color: #0F172A">How I build software</span>
+</a>
+
+
+<a class="work-card" href="case-rundoodle.html" style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; overflow: hidden; color: #0F172A">
+<div style="flex: 1.3 1 440px; min-height: 320px; background: #F0FDFA; display: flex; align-items: center; justify-content: center; position: relative; padding: 28px; box-sizing: border-box">
+<div style="position: absolute; inset: 18px; border: 2px dashed #99F6E4; border-radius: 12px"></div>
+<p style="position: relative; font-size: 14px; font-weight: 600; color: #115E59; text-align: center; max-width: 360px; line-height: 1.6">[ 10-second loop: a heart-shaped route drawing itself on a city map ]</p>
 </div>
-<div style="flex: 1; border-top: 1px solid #E2E8F0; padding-top: 14px; display: flex; flex-direction: column; gap: 10px">
-<ol style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: auto 132px 1fr; align-items: baseline; gap: 5px 10px">
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">1</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">/grill-with-docs</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">requirements + domain language</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">2</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">/to-spec</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">product requirements doc</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">3</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">/to-tickets</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">vertical-slice issues</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">4</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">prototype</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">validate uncertain designs</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">5</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">tdd</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">one slice at a time</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">6</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">code-review</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">two-axis quality review</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">7</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E; white-space: nowrap">diagnose</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">systematic debugging</span></li>
-<li style="display: contents"><span style="font-size: 11px; font-weight: 600; color: #94A3B8; text-align: right">8</span><code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; font-weight: 600; color: #0F766E">/improve-codebase-<wbr>architecture</code><span style="font-size: 12px; line-height: 1.4; color: #64748B">periodic architecture review</span></li>
-</ol>
+<div style="flex: 1 1 340px; padding: 36px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px; justify-content: center">
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #0F766E; border-radius: 999px; padding: 4px 12px">Google ADK</span>
+<span style="font-size: 12px; font-weight: 500; color: #475569; background: #F1F5F9; border-radius: 999px; padding: 4px 12px">Personal project · 2026</span>
 </div>
+<h3 style="font-size: 24px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em">RunDoodle</h3>
+<p style="font-size: 15px; line-height: 1.65; color: #334155">Type a place, a distance and a shape. Five agents turn it into a runnable GPS-art route on real streets, and refuse to route a design that fails the quality check.</p>
+<p style="font-size: 13px; color: #475569">5 agents · 213 Python tests · 10 × 3 blind test</p>
+<span style="font-size: 15px; font-weight: 600; color: #0F766E">View case study →</span>
 </div>
-<div style="flex: 1 1 280px; min-width: 280px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 26px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 40px; line-height: 1.05; font-weight: 700; letter-spacing: -0.03em; color: #0F766E">4 × 1st</span>
-<span style="font-size: 14px; font-weight: 600; color: #0F172A">Class rank in AI graduate courses</span>
+</a>
+
+
+</section>
+
+<section id="projects" style="scroll-margin-top: 64px; max-width: 1120px; margin: 0 auto; padding: 96px 32px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Projects</p>
+<h2 style="font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em">Machine learning projects</h2>
+<p style="font-size: 15px; color: #475569">Graduate courses at NTHU in Artificial Intelligence, Data Mining and Brain–Computer Interface · ranked 1st in each</p>
 </div>
-<div style="flex: 1; border-top: 1px solid #E2E8F0; padding-top: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px">
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; line-height: 1.4; color: #334155">Artificial Intelligence</span><span style="flex: none; font-size: 11px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 2px 10px">1 / 78</span></div>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; line-height: 1.4; color: #334155">Data Mining &amp; Applications</span><span style="flex: none; font-size: 11px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 2px 10px">1 / 88</span></div>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; line-height: 1.4; color: #334155">Brain–Computer Interface</span><span style="flex: none; font-size: 11px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 2px 10px">1 / 28</span></div>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; line-height: 1.4; color: #334155">IoT Technologies &amp; Applications</span><span style="flex: none; font-size: 11px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 2px 10px">1 / 18</span></div>
+<div class="g3" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Data Mining · team of 4</span>
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.35">Kaggle: Problematic Internet Use</h3>
+<p style="font-size: 14px; line-height: 1.65; color: #334155">High-dimensional, imbalanced data with heavy missing values. Ensembled LightGBM, XGBoost, CatBoost and TabNet with Optuna tuning and QWK threshold optimization.</p>
+<p style="font-size: 13px; color: #0F766E; font-weight: 600; margin-top: auto">Final test QWK 0.492</p>
 </div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">Artificial Intelligence</span>
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.35">Manufacturing ML</h3>
+<p style="font-size: 14px; line-height: 1.65; color: #334155">CNN wafer-defect classification from wafer-map images, and LSTM remaining-useful-life prediction for predictive maintenance.</p>
+<p style="font-size: 13px; color: #0F766E; font-weight: 600; margin-top: auto">CNN · LSTM</p>
 </div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">AI · BCI</span>
+<h3 style="font-size: 18px; font-weight: 600; line-height: 1.35">More experiments</h3>
+<p style="font-size: 14px; line-height: 1.65; color: #334155">Employee burnout prediction, tweet sentiment classification (NLP) and EEG-based emotion classification.</p>
+<p style="font-size: 13px; color: #0F766E; font-weight: 600; margin-top: auto">Classical ML · NLP · EEG</p>
 </div>
 </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="sec" aria-labelledby="exp-h">
-<div class="sec-in">
-<h2 id="exp-h" class="sec-h">Experience</h2>
-<div class="sec-body">
-<div style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 0 0 8px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2026 — Present</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
-<h3 style="font-size: 20px; font-weight: 600; line-height: 1.4">AI Data Application Engineer · <span style="color: #0F766E">LITEON Technology</span></h3>
-<p style="font-size: 14px; color: #64748B">AI &amp; Data Application Department</p>
+<section id="research" style="scroll-margin-top: 64px; max-width: 1120px; margin: 0 auto; padding: 96px 32px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Research</p>
+<h2 style="font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em">Research &amp; algorithms</h2>
 </div>
-</div>
-
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">LITEON · HR</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Workplace Bullying Complaint Management System</h3>
-<p style="font-size: 14px; color: #64748B">With the HR department</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Contributed to the project with HR, clarifying statutory processes and turning them into 5 closure paths, 13 auto-filled legal documents, 15 tracked deadlines with daily reminders and 14 notice types.</li>
-<li>Integrated a multimodal LLM to read scanned case documents and draft outcome notices, validated against recorded decisions and output format; HR reviews instead of writing from scratch.</li>
-<li>Built with AI coding agents using Matt Pocock&#39;s skills: /grill-with-docs for requirements, /to-spec for specs, then vertical slices built with /tdd and checked with /code-review.</li>
+<div class="g2" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">2025 · Master&#39;s thesis, NTHU</span>
+<h3 style="font-size: 20px; font-weight: 600; line-height: 1.35">AR Cues &amp; Perspectives in Remote Drone Operation</h3>
+<p style="font-size: 15px; line-height: 1.65; color: #334155">Designed and built a remote drone control interface on my own, then used it to study which AR cues and viewpoints best support pilots.</p>
+<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6; color: #475569">
+<li>AR control interface built in C#</li>
+<li>Motorized slide rail integrated for a third-person view</li>
+<li>User studies with eye-tracking analysis per task</li>
 </ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Flask</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">SQL Server</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LLM integration</span>
+<p style="font-size: 13px; color: #0F766E; font-weight: 600; margin-top: auto">C# · AR · Hardware integration · Eye tracking</p>
 </div>
-</div>
-</article>
-
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">LITEON · R&amp;D</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">PCB Placement Multi-Agent POC</h3>
-<p style="font-size: 14px; color: #64748B">With the R&amp;D department · Claude Agent SDK, developed with Claude Code</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">A proof of concept testing whether agents can take on part of an engineering design flow: from a KiCad schematic and confirmed requirements to component placement, checks and file delivery. Scope covers placement only, not routing or manufacturing.</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Built four agents (requirements coordination, placement, manufacturability review and acceptance), with tool allowlists, write restrictions and delivery gates enforced in Python.</li>
-<li>Drove KiCad CLI through MCP and checked outputs with schematic–PCB consistency, geometry checks and file-hash comparison instead of relying on the model&#39;s own report.</li>
-<li>Built a local FastAPI + SSE interface for requirement Q&amp;A, run status, layout preview and downloads. Also built a single-agent plugin and compared it with the multi-agent system on small circuit cases to judge where each approach fits.</li>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">2023 — 2024 · with NCSIST</span>
+<h3 style="font-size: 20px; font-weight: 600; line-height: 1.35">Flight Instrument Layout Optimization</h3>
+<p style="font-size: 15px; line-height: 1.65; color: #334155">Placed cockpit instruments to shorten how far a pilot&#39;s eyes travel, reducing cognitive load and improving operating performance.</p>
+<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.6; color: #475569">
+<li>Modeled placement as optimization on eye-movement distance</li>
+<li>Two-phase solver: exhaustive search, then a genetic algorithm</li>
+<li>Implemented in C#</li>
 </ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Claude Agent SDK</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">MCP</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">KiCad</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">FastAPI</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">SSE</span>
-</div>
-</div>
-</article>
-
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">LITEON · BI</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Data Visualization with Power BI</h3>
-<p style="font-size: 14px; color: #64748B">For procurement and production teams</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">Organized data and visualized it in Power BI so procurement and production teams can see what is happening at a glance.</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li><strong style="font-weight: 600; color: #0F172A">Supply-chain risk</strong>: visualized part-number hierarchies, so when a raw material is affected, buyers can immediately pinpoint every impacted part.</li>
-<li><strong style="font-weight: 600; color: #0F172A">Production scheduling</strong>: factory-layout and process-flow views show each work order's location, WIP and progress.</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Power BI</span>
-</div>
-</div>
-</article>
+<p style="font-size: 13px; color: #0F766E; font-weight: 600; margin-top: auto">Genetic algorithm · Optimization · C#</p>
 </div>
 </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="sec" aria-labelledby="proj-h">
-<div class="sec-in">
-<h2 id="proj-h" class="sec-h">Projects</h2>
-<div class="sec-body">
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2026 · Personal</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">RunDoodle: GPS-Art Running Route Planning Agent</h3>
-<p style="font-size: 14px; color: #64748B">Personal project · Built with Google ADK, following Matt Pocock's development framework</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">A multi-agent system that turns a natural-language request (place, distance and shape) into a runnable GPS-art route on real streets, with a map preview and GPX export.</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Orchestrated intent parsing, shape design, road-network analysis, placement search and evaluation agents in Google ADK, using session state, events and nested loops to carry state across stages and self-correct.</li>
-<li>Gated quality with a multimodal visual judge, deterministic geometry checks and discrete Fréchet similarity; bounded retries stop routing and return a structured failure report when a design falls short. Maintain 213 Python and 16 frontend offline tests.</li>
-<li>Integrated OSM, Google Routes, OSRM and Google Maps with chunked requests and fallbacks, using a KDTree to pre-screen candidates before costly routing; ran a blind test of 10 themes × 3 runs comparing AI and human judgments.</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google ADK</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LiteLLM</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Flask</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">OSRM</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Google Routes</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">pytest</span>
+<section id="education" style="scroll-margin-top: 64px; max-width: 1120px; margin: 0 auto; padding: 96px 32px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Education</p>
+<h2 style="font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em">Education &amp; coursework</h2>
 </div>
-</div>
-</article>
+<div class="g2" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch">
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">2023 — 2025</span>
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="font-size: 20px; font-weight: 600">National Tsing Hua University</h3><p style="font-size: 14px; color: #475569">M.S., Industrial Engineering &amp; Engineering Management</p><p style="font-size: 14px; color: #475569">GPA 4.16 / 4.3 · Thesis defense A+</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>Artificial Intelligence</span><span style="font-size: 12px; font-weight: 600; color: #115E59">A+ · 1 / 78</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>Data Mining &amp; Applications</span><span style="font-size: 12px; font-weight: 600; color: #115E59">A+ · 1 / 88</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>Brain–Computer Interface</span><span style="font-size: 12px; font-weight: 600; color: #115E59">A+ · 1 / 28</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>IoT Technologies &amp; Applications</span><span style="font-size: 12px; font-weight: 600; color: #115E59">A+ · 1 / 18</span></div>
 
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2024 · NTHU</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Machine Learning Projects</h3>
-<p style="font-size: 14px; color: #64748B">Graduate courses in Artificial Intelligence, Data Mining and Brain–Computer Interface · ranked 1st in each</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li><strong style="font-weight: 600; color: #0F172A">Kaggle: Problematic Internet Use</strong> (team of 4) — handled high-dimensional, imbalanced data with heavy missing values; ensembled LightGBM, XGBoost, CatBoost and TabNet with Optuna tuning and QWK threshold optimization; final test QWK 0.492.</li>
-<li><strong style="font-weight: 600; color: #0F172A">Manufacturing</strong> — CNN wafer-defect classification from wafer-map images; LSTM remaining-useful-life prediction for predictive maintenance.</li>
-<li><strong style="font-weight: 600; color: #0F172A">More</strong> — employee burnout prediction, tweet sentiment classification (NLP) and EEG-based emotion classification.</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Python</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LightGBM</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">XGBoost</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">CatBoost</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">CNN</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">LSTM</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">NLP</span>
 </div>
+
+
 </div>
-</article>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">2019 — 2023</span>
+<div style="display: flex; flex-direction: column; gap: 4px"><h3 style="font-size: 20px; font-weight: 600">National Chung Cheng University</h3><p style="font-size: 14px; color: #475569">B.S., Psychology · Minor in Information Management</p><p style="font-size: 14px; color: #475569">GPA 4.02 / 4.3 · Ranked 1 / 53 in Fall 2021</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>R Data Analysis for Social Science</span><span style="font-size: 12px; font-weight: 600; color: #115E59">99</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>Web Programming</span><span style="font-size: 12px; font-weight: 600; color: #115E59">98</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>Programming</span><span style="font-size: 12px; font-weight: 600; color: #115E59">97</span></div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding: 8px 12px; background: #F0FDFA; border-radius: 8px"><span>IoT Technologies &amp; Applications</span><span style="font-size: 12px; font-weight: 600; color: #115E59">96</span></div>
+
+</div>
+
+
 </div>
 </div>
 </section>
 
-<!-- RESEARCH -->
-<section id="research" class="sec" aria-labelledby="res-h">
-<div class="sec-in">
-<h2 id="res-h" class="sec-h">Research &amp; Algorithms</h2>
-<div class="sec-body">
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2025</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">AR Cues &amp; Perspectives in Remote Drone Operation</h3>
-<p style="font-size: 14px; color: #64748B">Master&#39;s thesis, NTHU · Human factors group · Degree exam A+</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">Designed and built a remote drone control interface on my own, then used it to study which AR cues and viewpoints best support pilots.</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Developed the AR control interface in C#, overlaying visual cues on the pilot&#39;s view during remote operation.</li>
-<li>Integrated a motorized slide rail into the system to give pilots a third-person view of the drone, combining software and hardware in one working setup.</li>
-<li>Designed user studies comparing combinations of AR cues and viewpoints, and analyzed eye-tracking data to identify the best viewpoint for each task.</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">C#</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Augmented Reality</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Hardware integration</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">User studies</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Eye tracking</span>
+<section id="others" style="scroll-margin-top: 64px; max-width: 1120px; margin: 0 auto; padding: 96px 32px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #0F766E">Others</p>
+<h2 style="font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em">Data visualization</h2>
 </div>
+<div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; display: flex; flex-wrap: wrap; gap: 20px 48px">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B">2026 · LITEON · Power BI</span>
+<h3 style="font-size: 20px; font-weight: 600">Data Visualization with Power BI</h3>
+<p style="font-size: 15px; line-height: 1.65; color: #334155">Organized data and visualized it so procurement and production teams can see what is happening at a glance.</p>
 </div>
-</article>
-
-<article class="entry" style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px; margin: 0 -24px; border-radius: 10px">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2023 — 2024</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">Flight Instrument Layout Optimization</h3>
-<p style="font-size: 14px; color: #64748B">Industry–academia collaboration with NCSIST · Algorithm development</p>
-<p style="font-size: 15px; line-height: 1.7; color: #334155">Cockpit instrument placement determines how far a pilot&#39;s eyes travel across the panel. The goal was to shorten that distance, reducing cognitive load and improving operating performance.</p>
-<ul style="padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.65; color: #334155">
-<li>Formulated instrument placement as an optimization problem, with pilot eye-movement distance as the objective.</li>
-<li>Designed a two-phase solver: exhaustive search to find an initial layout, then a genetic algorithm to fine-tune each instrument&#39;s position.</li>
-<li>Implemented the algorithms in C# as the project&#39;s software developer.</li>
-</ul>
-<div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Genetic Algorithm</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Exhaustive search</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">Optimization modeling</span>
-<span style="font-size: 12px; font-weight: 500; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 4px 12px">C#</span>
-</div>
-</div>
-</article>
-</div>
-</div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="sec" aria-labelledby="edu-h">
-<div class="sec-in">
-<h2 id="edu-h" class="sec-h">Education &amp; Coursework</h2>
-<div class="sec-body">
-<article style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2023 — 2025</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">National Tsing Hua University</h3>
-<p style="font-size: 15px; color: #334155">M.S., Industrial Engineering &amp; Engineering Management</p>
-<p style="font-size: 14px; color: #64748B">GPA 4.16 / 4.3 · Thesis defense A+</p>
-</div>
-<table style="font-size: 14px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; overflow: hidden">
-<thead>
-<tr style="border-bottom: 1px solid #E2E8F0; background: #F1F5F9">
-<th scope="col" style="text-align: left; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #475569">Course</th>
-<th scope="col" style="text-align: right; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #475569">Grade</th>
-<th scope="col" style="text-align: right; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #475569">Class rank</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Artificial Intelligence</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">A+</td><td style="text-align: right; padding: 11px 16px"><span style="font-size: 12px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 3px 10px">1 / 78</span></td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Data Mining &amp; Applications</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">A+</td><td style="text-align: right; padding: 11px 16px"><span style="font-size: 12px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 3px 10px">1 / 88</span></td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Brain–Computer Interface</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">A+</td><td style="text-align: right; padding: 11px 16px"><span style="font-size: 12px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 3px 10px">1 / 28</span></td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">IoT Technologies &amp; Applications</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">A+</td><td style="text-align: right; padding: 11px 16px"><span style="font-size: 12px; font-weight: 600; color: #115E59; background: #CCFBF1; border-radius: 999px; padding: 3px 10px">1 / 18</span></td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Human Information Processing</td><td style="text-align: right; padding: 11px 16px">A</td><td style="text-align: right; padding: 11px 16px; color: #475569">2 / 31</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Statistical Methods</td><td style="text-align: right; padding: 11px 16px">A</td><td style="text-align: right; padding: 11px 16px; color: #475569">17 / 78</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Software Project Management</td><td style="text-align: right; padding: 11px 16px">A</td><td style="text-align: right; padding: 11px 16px; color: #475569">17 / 41</td></tr>
-<tr><td style="padding: 11px 16px">Production Planning &amp; Control</td><td style="text-align: right; padding: 11px 16px">A−</td><td style="text-align: right; padding: 11px 16px; color: #475569">15 / 122</td></tr>
-</tbody>
-</table>
-</div>
-</article>
-
-<article style="display: flex; flex-wrap: wrap; gap: 8px 32px; padding: 24px 0">
-<p style="flex: 0 0 140px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #64748B; padding-top: 4px">2019 — 2023</p>
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<h3 style="font-size: 18px; font-weight: 600; line-height: 1.4">National Chung Cheng University</h3>
-<p style="font-size: 15px; color: #334155">B.S., Psychology · Minor in Information Management</p>
-<p style="font-size: 14px; color: #64748B">GPA 4.02 / 4.3 · Ranked 1 / 53 in Fall 2021</p>
-</div>
-<table style="font-size: 14px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; overflow: hidden">
-<thead>
-<tr style="border-bottom: 1px solid #E2E8F0; background: #F1F5F9">
-<th scope="col" style="text-align: left; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #475569">Course</th>
-<th scope="col" style="text-align: right; padding: 10px 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #475569">Score</th>
-</tr>
-</thead>
-<tbody>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">R Data Analysis for Social Science</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">99</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Web Programming</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">98</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Programming</td><td style="text-align: right; padding: 11px 16px; font-weight: 600">97</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">IoT Technologies &amp; Applications</td><td style="text-align: right; padding: 11px 16px">96</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Data Structures</td><td style="text-align: right; padding: 11px 16px">93</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Calculus</td><td style="text-align: right; padding: 11px 16px">93</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Linear Algebra</td><td style="text-align: right; padding: 11px 16px">92</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">System Simulation</td><td style="text-align: right; padding: 11px 16px">92</td></tr>
-<tr style="border-bottom: 1px solid #F1F5F9"><td style="padding: 11px 16px">Database Management</td><td style="text-align: right; padding: 11px 16px">88</td></tr>
-<tr><td style="padding: 11px 16px">Big Data &amp; Data Analysis</td><td style="text-align: right; padding: 11px 16px">87</td></tr>
-</tbody>
-</table>
-<p style="font-size: 13px; line-height: 1.6; color: #64748B">Grades and class ranks as recorded on official transcripts.</p>
-</div>
-</article>
+<div style="flex: 1.4 1 420px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<div style="background: #F8FAFC; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 600">Supply-chain risk</span><span style="font-size: 14px; line-height: 1.6; color: #475569">Part-number hierarchies, so buyers can pinpoint every part a raw-material issue affects.</span></div>
+<div style="background: #F8FAFC; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 14px; font-weight: 600">Production scheduling</span><span style="font-size: 14px; line-height: 1.6; color: #475569">Factory-layout and process-flow views of each work order&#39;s location, WIP and progress.</span></div>
 </div>
 </div>
 </section>
 
 </main>
-
-<footer style="border-top: 1px solid #E2E8F0">
-<div style="max-width: 1120px; margin: 0 auto; padding: 28px 32px 40px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 13px; line-height: 1.6; color: #64748B">
-<span>© 2026 Cynthia I-Hsuan Pan · Designed and built with HTML &amp; CSS, set in Inter, hosted on GitHub Pages.</span>
-<a href="#top" style="font-weight: 600">Back to top ↑</a>
-</div>
+<footer style="max-width: 1120px; margin: 96px auto 0; padding: 28px 32px 40px; box-sizing: border-box; border-top: 1px solid #E2E8F0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 13px; color: #64748B">
+<span>© 2026 Cynthia I-Hsuan Pan · Built with HTML &amp; CSS, hosted on GitHub Pages.</span>
+<a href="#top">Back to top ↑</a>
 </footer>
-
 </div>
-
 <script>
 (function () {
   var nav = document.querySelector('header nav');
